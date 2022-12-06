@@ -6,6 +6,7 @@ import {Provider} from "react-redux";
 import HomePage from "./home";
 import ProfilePage from "./profile";
 import profileReducer from "./profile/profile-reducer"
+import Details from "./details-summary-list/details-component";
 
 
 const store = configureStore({
@@ -21,6 +22,7 @@ function GMTSfashion() {
             <Routes>
                 <Route path="" element={<HomePage/>}/>
                 <Route path="profile" element={<ProfilePage/>}/>
+                <Route path="/details" element={<Details/>}/>
 
             </Routes>
         </Provider>

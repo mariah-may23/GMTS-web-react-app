@@ -10,6 +10,7 @@ function App() {
     <BrowserRouter>
         <Routes>
             <Route path="/gmts/*" element={<StartingPage/>}/>
+
         </Routes>
     </BrowserRouter>
   );
