@@ -1,0 +1,12 @@
+.gmts-textbox-edit-profile{
+ width: 100%;
+ border:0px;
+ resize: none;
+ outline: none;
+ padding : 0px;
+ min-height:30px;
+}
+
+.wd-bio-edit-profile{
+ min-height:100px;
+}

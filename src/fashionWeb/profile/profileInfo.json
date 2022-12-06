@@ -1,15 +1,17 @@
 {
+  "_id": 123,
   "firstName": "Taehyeon",
   "lastName": "Lee",
   "fullName": "Taehyeon Lee",
-  "handle": "@TedLee",
+  "userName": "TedLee",
   "profileImage": "Hi.png",
-  "bannerImage": "myuniverse.png",
-  "bio": "MSCS candidate @ Northeastern University, Aspiring Software Engineer, Seeking internship/coop opportunities for summer 2023.",
-  "website": "linkedin.com/in/taehyeon-lee-b67776165/",
-  "location": "Boston, MA",
+  "bio": "",
+  "address1": "352 Northeastern ave",
+  "address2": "",
+  "city": "Boston",
+  "state": "MA",
+  "zipcode": "02123",
+  "email": "random@email.com",
   "dateOfBirth": "10/05/1993",
-  "dateJoined": "4/2009",
-  "followingCount": 340,
-  "followersCount": 223
+  "dateJoined": "09/2021"
 }

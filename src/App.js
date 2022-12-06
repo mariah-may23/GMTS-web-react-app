@@ -9,7 +9,8 @@ function App() {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/gmts/*" element={<StartingPage/>}/>
+            <Route index element={<StartingPage/>}/>
+            <Route path="/*" element={<StartingPage/>}/>
         </Routes>
     </BrowserRouter>
   );
