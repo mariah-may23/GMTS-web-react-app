@@ -8,7 +8,7 @@ const ProfileComponent = () =>{
 
     return(
         <div className="row m-2">
-            <Link to="/gmts" className="fw-bolder text-decoration-none text-black" style={{fontSize:"20px"}} >
+            <Link to="/" className="fw-bolder text-decoration-none text-black" style={{fontSize:"20px"}} >
                 GMTS
             </Link>
             <div className="row mb-3">

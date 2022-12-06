@@ -9,4 +9,4 @@ const EditProfileScreen = () => {
         </>
     );
 }
-export default EditProfileComponent;
+export default EditProfileScreen;

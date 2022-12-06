@@ -23,8 +23,10 @@ const EditProfileComponent = () =>{
 
         const updateName = firstName + " " + lastName;
         console.log("variable made for full name: " + updateName);
+        /*
         useEffect(() => {setNewFullName(updateName)}, []);
-
+        */
+        {setNewFullName(updateName)};
         console.log(fullName);
         const temp = {...userProfile, fullName, firstName, lastName, user, address1, address2, city, state, zipcode, email}
         dispatch(editProfile(temp));
