@@ -3,8 +3,9 @@ import {Link} from "react-router-dom";
 import React from "react";
 
 
+
 const ProfileComponent = () =>{
-    const userProfile = useSelector((state) => state.profile);
+    const userProfile = useSelector((state) => state.user);
 
     return(
         <div className="row m-2">

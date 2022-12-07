@@ -6,9 +6,12 @@ import {useDispatch, useSelector} from "react-redux";
 import {profileThunk} from "../users/users-thunk";
 
 const HomePage = () => {
-    const {currentUser} = false;
+    const {currentUser} = useSelector((state)=> state.user)
     //console.log(currentUser)
     const dispatch = useDispatch()
+        useEffect(()=> {
+            dispatch(profileThunk())
+        },[])
 
 
     return (

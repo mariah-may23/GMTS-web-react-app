@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {profileThunk} from "./users-thunk";
 
 const CurrentUser = ({children}) => {
-    const {currentUser} = useSelector((state) => state.users)
+    const {currentUser} = useSelector((state) => state.user)
     const dispatch = useDispatch()
     useEffect(()=> {
         dispatch(profileThunk())

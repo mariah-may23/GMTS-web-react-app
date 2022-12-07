@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {loginThunk} from "./users-thunk";
 import "./index.css"
 const Login = () => {
-    const [username, setUsername] = useState('bob')
+    const [userName, setUsername] = useState('bob')
     const [password, setPassword] = useState('bob123')
 
     const [error, setError] = useState(null)
@@ -12,11 +12,9 @@ const Login = () => {
     const handleLoginButton = () => {
 
         setError(null)
-        const loginUser = {username, password }
-
+        const loginUser = {userName, password }
         dispatch(loginThunk(loginUser))
-
-        setTimeout(window.location = "/home",20000)
+        setTimeout(window.location = "/",20000)
 
 
 
@@ -36,7 +34,7 @@ const Login = () => {
 
                     <input
                         className="form-control mb-2"
-                        value={username}
+                        value={userName}
                         onChange={(e)=> setUsername(e.target.value)}/>
                     <input  className="form-control mb-2"
                         value={password}
@@ -47,7 +45,7 @@ const Login = () => {
                     </button>
                     {
                         currentUser &&
-                        <h2>welcome {currentUser.username}</h2>
+                        <h2>welcome {currentUser.userName}</h2>
 
                     }
                 </div>

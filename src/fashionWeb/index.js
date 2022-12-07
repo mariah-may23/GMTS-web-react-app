@@ -14,31 +14,32 @@ import UserList from "./users";
 import usersReducer from "./users/users-reducer";
 import Register from "./users/register";
 import Login from "./users/login";
+import CurrentUser from "./users/current-user";
 
 
 const store = configureStore({
     reducer: {
         profile: profileReducer,
         search: searchReducer,
-        reducer: {users: usersReducer}
+        user: usersReducer
     }
 });
 
 function GMTSfashion() {
     return(
         <Provider store={store}>
-
-            <Routes>
-                <Route path="" element={<HomePage/>}/>
-                <Route path="search" element={<Search/>}/>
-                <Route path="profile" element={<ProfilePage/>}/>
-                <Route path="edit-profile" element={<EditProfilePage/>}/>
-                 <Route path="details" element={<Details/>}/>
-                 <Route path="/users" element={<UserList/>}/>
-                 <Route path="/register" element={<Register/>}/>
-                 <Route path="/login" element={<Login/>}/>
-
-            </Routes>
+            <CurrentUser>
+                <Routes>
+                    <Route path="" element={<HomePage/>}/>
+                    <Route path="search" element={<Search/>}/>
+                    <Route path="profile" element={<ProfilePage/>}/>
+                    <Route path="edit-profile" element={<EditProfilePage/>}/>
+                     <Route path="details" element={<Details/>}/>
+                     <Route path="/users" element={<UserList/>}/>
+                     <Route path="/register" element={<Register/>}/>
+                     <Route path="/login" element={<Login/>}/>
+                </Routes>
+            </CurrentUser>
         </Provider>
     );
 }
