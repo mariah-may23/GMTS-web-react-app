@@ -10,12 +10,17 @@ import profileReducer from "./profile/profile-reducer"
 import Search from "./search/search-component";
 import searchReducer from "./search/search-reducer";
 import Details from "./details-summary-list/details-component";
+import UserList from "./users";
+import usersReducer from "./users/users-reducer";
+import Register from "./users/register";
+import Login from "./users/login";
 
 
 const store = configureStore({
     reducer: {
         profile: profileReducer,
-        search: searchReducer
+        search: searchReducer,
+        reducer: {users: usersReducer}
     }
 });
 
@@ -29,6 +34,9 @@ function GMTSfashion() {
                 <Route path="profile" element={<ProfilePage/>}/>
                 <Route path="edit-profile" element={<EditProfilePage/>}/>
                  <Route path="details" element={<Details/>}/>
+                 <Route path="/users" element={<UserList/>}/>
+                 <Route path="/register" element={<Register/>}/>
+                 <Route path="/login" element={<Login/>}/>
 
             </Routes>
         </Provider>

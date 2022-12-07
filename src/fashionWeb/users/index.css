@@ -1,0 +1,35 @@
+body,html{
+    margin:0;
+    width:100%;
+}
+html{
+    background-color: black;
+}
+
+.row {
+    margin:0;
+    padding-left:20px;
+}
+.wd-title {
+    text-align: center;
+
+    font-family: Copperplate, serif;
+    color: white;
+    font-size: xxx-large;
+
+}
+.wd-title-black {
+    text-align: center;
+
+    font-family: Copperplate, serif;
+    color: black;
+    font-size: xxx-large;
+
+}
+
+.wd-border{
+
+    border-style: groove;
+    border-width: medium;
+    top: -30px;
+}

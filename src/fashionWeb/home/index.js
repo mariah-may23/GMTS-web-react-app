@@ -1,6 +1,22 @@
-const HomePage = () => {
+import React from "react";
+import Homepage from "./homepage";
+import "./index.css"
+import Slides from "./slideshow";
+import Content from "./personal-content";
+
+
+const HomeComponent = () => {
     return(
-        <h1> HomePage checking in home index.js </h1>
+        <>
+
+            <Homepage/>
+            <Slides/>
+            <Content/>
+
+
+
+
+        </>
     );
-}
-export default HomePage;
+};
+export default HomeComponent;
