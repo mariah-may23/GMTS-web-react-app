@@ -2,14 +2,17 @@ import {useSelector, useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
 import React, {useState, useEffect} from "react";
 import {editProfile} from "../profile/profile-reducer"
+import {updateUserThunk} from "../users/users-thunk";
 
 const EditProfileComponent = () =>{
-    const userProfile = useSelector((state) => state.profile);
+    const userProfile = useSelector((state) => state.user.currentUser);
+    console.log("Inside Edit Profile page printing current user")
+    console.log(userProfile)
     const [profile, setProfile] = useState(userProfile);
     const [fullName, setNewFullName] = useState(userProfile.fullName);
     const [firstName, setNewFirstName] = useState(userProfile.firstName);
     const [lastName, setNewLastName] = useState(userProfile.lastName);
-    const [user, setNewUsername] = useState(userProfile.userName);
+    const [userName, setNewUsername] = useState(userProfile.userName);
     const [address1, setNewAddress1] = useState(userProfile.address1);
     const [address2, setNewAddress2] = useState(userProfile.address2);
     const [city, setNewCity] = useState(userProfile.city);
@@ -23,19 +26,22 @@ const EditProfileComponent = () =>{
 
         const updateName = firstName + " " + lastName;
         console.log("variable made for full name: " + updateName);
-        /*
-        useEffect(() => {setNewFullName(updateName)}, []);
-        */
         {setNewFullName(updateName)};
-        console.log(fullName);
-        const temp = {...userProfile, fullName, firstName, lastName, user, address1, address2, city, state, zipcode, email}
-        dispatch(editProfile(temp));
-        console.log({temp});
+//        const temp = {...userProfile, fullName, firstName, lastName, userName, address1, address2, city, state, zipcode, email}
+//        dispatch(editProfile({...userProfile, fullName, firstName, lastName, userName, address1, address2, city, state, zipcode, email}));
+        dispatch(updateUserThunk({
+            ...userProfile,fullName, firstName, lastName, userName, address1, address2, city, state, zipcode, email
+        }))
+        console.log("done editing render changed value")
+        console.log(userProfile);
+//        console.log({temp});
     }
 
 
 
     return(
+        <div>
+        {userProfile &&
         <div className="row mb-2">
             <div className="row m-2">
                 <Link to="/profile" className="col-1">
@@ -47,10 +53,12 @@ const EditProfileComponent = () =>{
                     </label>
                 </div>
                 <div className="col-3">
+                    <Link to="/profile" className="col-2">
                         <button onClick={SaveProfile}
                          className="btn btn-dark rounded-pill float-end">
                             <b>Save</b>
                         </button>
+                    </Link>
                 </div>
             </div>
 
@@ -79,7 +87,7 @@ const EditProfileComponent = () =>{
                         <br/>
                         <textarea className="mt-1 gmts-textbox-edit-profile"
                          onChange={(e) => setNewUsername(e.target.value)}
-                         rows="1" value={user}/>
+                         rows="1" value={userName}/>
                     </div>
 
                     <div className="border border-muted rounded ps-2 pe-2 mb-2 ms-3 col-5">
@@ -145,6 +153,8 @@ const EditProfileComponent = () =>{
                  </form>
              </div>
 
+         </div>
+         }
          </div>
 
     );
