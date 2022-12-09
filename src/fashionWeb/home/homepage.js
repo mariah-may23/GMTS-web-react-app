@@ -7,11 +7,11 @@ import {profileThunk} from "../users/users-thunk";
 
 const HomePage = () => {
     const {currentUser} = useSelector((state)=> state.user)
-    //console.log(currentUser)
     const dispatch = useDispatch()
         useEffect(()=> {
             dispatch(profileThunk())
         },[])
+    console.log(currentUser)
 
 
     return (

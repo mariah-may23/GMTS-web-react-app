@@ -3,19 +3,20 @@ import {useDispatch, useSelector} from "react-redux";
 import {loginThunk} from "./users-thunk";
 import "./index.css"
 const Login = () => {
-    const [userName, setUsername] = useState('bob')
-    const [password, setPassword] = useState('bob123')
+    const [userName, setUsername] = useState('TedLee')
+    const [password, setPassword] = useState('Ted1234')
 
     const [error, setError] = useState(null)
-    const {currentUser} = useSelector((state) => state.users)
+    const {currentUser} = useSelector((state) => state.user)
     const dispatch = useDispatch()
     const handleLoginButton = () => {
 
         setError(null)
         const loginUser = {userName, password }
+        console.log(loginUser);
         dispatch(loginThunk(loginUser))
-        setTimeout(window.location = "/",20000)
-
+//        setTimeout(window.location = "/",200000)
+        setTimeout(200000000000000)
 
 
     }

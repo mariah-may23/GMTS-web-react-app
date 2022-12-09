@@ -7,7 +7,7 @@ const Register = () => {
     const [password, setPassword] = useState('bob123')
     const [validatePassword, setValidatePassword] = useState('bob123')
     const [error, setError] = useState(null)
-    const {currentUser} = useSelector((state) => state.users)
+    const {currentUser} = useSelector((state) => state.user)
     const dispatch = useDispatch()
     const handleRegisterButton = () => {
         if(password!== validatePassword){

@@ -1,11 +1,16 @@
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import React from "react";
+import userInfo from "./profileInfo";
+import PurchasedList from "./purchased-list";
 
 
 
 const ProfileComponent = () =>{
     const userProfile = useSelector((state) => state.user);
+    const loggedIn = true;
+    console.log("Printing current user in the profile component")
+    console.log(userProfile.currentUser);
 
     return(
         <div className="row m-2">
@@ -20,7 +25,7 @@ const ProfileComponent = () =>{
                 </div>
                 <div className="col-2" style={{fontSize:"13px"}}>
                     <label className="float-end">
-                        {userProfile.firstName} {userProfile.lastName}
+                        {userProfile.currentUser.firstName} {userProfile.currentUser.lastName}
                     </label>
                 </div>
             </div>
@@ -50,16 +55,21 @@ const ProfileComponent = () =>{
                     </label>
                     <br></br>
                 </div>
-                <div className="col-5 mb-2 ms-2" style={{fontSize:"13px"}}>
-                    <label className="mb-0 fw-bolder">
-                        Date Joined
-                    </label>
-                    <br></br>
-                    <label className="col-6 border-bottom border-dark">
-                        {userProfile.dateJoined}
-                    </label>
-                    <br></br>
-                </div>
+                {
+                    loggedIn &&
+                    <div className="col-5 mb-2 ms-2" style={{fontSize:"13px"}}>
+                        <label className="mb-0 fw-bolder">
+                            Date Joined
+                        </label>
+                        <br></br>
+                        <label className="col-6 border-bottom border-dark">
+                            {userProfile.dateJoined}
+                        </label>
+                        <br></br>
+
+
+                    </div>
+                }
 
                 <div className="col-5 mb-2 ms-2" style={{fontSize:"13px"}}>
                     <label className="mb-0 fw-bolder">
@@ -71,6 +81,8 @@ const ProfileComponent = () =>{
                     </label>
                     <br></br>
                 </div>
+
+                {loggedIn &&
                 <div className="col-5 mb-2 ms-2" style={{fontSize:"13px"}}>
                     <label className="mb-0 fw-bolder">
                         Date of Birth
@@ -81,10 +93,12 @@ const ProfileComponent = () =>{
                     </label>
                     <br></br>
                 </div>
+
+                }
             </div>
 
 
-
+        { loggedIn &&
             <div className="row mb-3">
                 <label className="border-bottom mb-2" style={{fontSize:"20px"}}>
                     Shipping/Payment Information
@@ -154,6 +168,7 @@ const ProfileComponent = () =>{
                     </label>
                 </div>
             </div>
+        }
 
 
 
@@ -162,6 +177,7 @@ const ProfileComponent = () =>{
                 <label className="border-bottom mb-2" style={{fontSize:"20px"}}>
                     Purchased History
                 </label>
+                <PurchasedList/>
                 <div className="col-5 mb-2 ms-2" style={{fontSize:"13px"}}>
                    List of purchased product
                 </div>

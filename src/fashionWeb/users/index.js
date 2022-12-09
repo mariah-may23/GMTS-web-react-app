@@ -6,7 +6,7 @@ import {findAllUsersThunk} from "./users-thunk"; //FETCHES USERS AND PUT THEM IN
 const UserList = () => {
    // const [users, setUsers] = useState([])
     //PUT USERS IN A REDUCER AND READ THOSE USERS FROM THE REDUCER
-    const {users} = useSelector((state) => state.users)
+    const {users} = useSelector((state) => state.user)
    // const findAllUsers = async () => {
    //     const users = await service.findAllUsers()
      //   setUsers(users)

@@ -57,7 +57,7 @@ const EditProfileComponent = () =>{
             <div className="ms-3">
                  <form>
                     <h3> Account Profile </h3>
-                    <div className="row ms-3 mb-2">
+                    <div className="row mb-2">
                         <div className="border border-muted rounded ps-2 pe-2 mb-2 col-4 me-3">
                             <span className="mt-1 mb-1 text-muted">First Name</span>
                             <br/>
@@ -91,7 +91,7 @@ const EditProfileComponent = () =>{
                     </div>
 
                     <h3> Shipping Address </h3>
-                    <div className="row mb-2 ms-3">
+                    <div className="row mb-2">
                     <div className="border border-muted rounded ps-2 pe-2 mb-2 col-4">
                         <span className="mt-1 mb-1 text-muted">Address1</span>
                         <br/>
@@ -132,7 +132,7 @@ const EditProfileComponent = () =>{
                     </div>
 
                     <h3> Payment Method </h3>
-                    <div className="row mb-2 ms-3">
+                    <div className="row mb-2">
                         <div className="border border-muted rounded ps-2 pe-2 mb-2 col-5">
                             <span className="mt-1 mb-1 text-muted">Card Number</span>
                             <br/>
