@@ -23,7 +23,7 @@ const UserList = () => {
                 {
                     users.map((user) =>
                     <li key={user._id}>
-                        {user.username}
+                        {user.userName}
                     </li>
                     )}
             </ul>
