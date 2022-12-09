@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {registerThunk} from "./users-thunk";
 
 const Register = () => {
-    const [username, setUsername] = useState('bob')
+    const [userName, setUsername] = useState('bob')
     const [password, setPassword] = useState('bob123')
     const [validatePassword, setValidatePassword] = useState('bob123')
     const [error, setError] = useState(null)
@@ -16,7 +16,7 @@ const Register = () => {
         }
 
         setError(null)
-        const newUser = {username, password }
+        const newUser = {userName, password }
 
         dispatch(registerThunk(newUser))
 
@@ -45,7 +45,7 @@ const Register = () => {
 
                     <input
                         className="form-control mb-2"
-                        value={username}
+                        value={userName}
                         onChange={(e)=> setUsername(e.target.value)}/>
                     <input  className="form-control mb-2"
                         value={password}
@@ -58,7 +58,7 @@ const Register = () => {
                     </button>
                     {
                         currentUser &&
-                        <h2 className="wd-profile-title">welcome {currentUser.username}</h2>
+                        <h2 className="wd-profile-title">welcome {currentUser.userName}</h2>
 
                     }
                 </div>

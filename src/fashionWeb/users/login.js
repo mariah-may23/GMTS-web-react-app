@@ -15,7 +15,7 @@ const Login = () => {
         const loginUser = {userName, password }
         console.log(loginUser);
         dispatch(loginThunk(loginUser))
-//        setTimeout(window.location = "/",200000)
+        //setTimeout(window.location = "/",200)
         setTimeout(200000000000000)
 
 

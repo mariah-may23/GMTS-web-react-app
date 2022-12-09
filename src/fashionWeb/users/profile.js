@@ -16,7 +16,7 @@ const Profile = () => {
                     <h1 className="wd-title">PROFILE</h1>
                     {
                         currentUser &&
-                        <h2 className="wd-profile-title">welcome {currentUser.username}</h2>
+                        <h2 className="wd-profile-title">welcome {currentUser.userName}</h2>
 
 
 

@@ -13,7 +13,6 @@ const HomePage = () => {
         },[])
     console.log(currentUser)
 
-
     return (
         <div >
             <div className="row bg-black mb-0">
@@ -43,7 +42,7 @@ const HomePage = () => {
                                     type="submit">Profile
                             </button>
                         </form>
-                    <h2>WELCOME {currentUser.username}</h2>
+                    <h2>WELCOME {currentUser.userName}</h2>
 
                     </div>
                 }
