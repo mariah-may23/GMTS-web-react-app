@@ -16,7 +16,8 @@ import Register from "./users/register";
 import Login from "./users/login";
 import CurrentUser from "./users/current-user";
 import SneakerSearch from "./sneakersapi/sneakers-search";
-import sneakersReducer from "./sneakersapi/sneakers-reducer"
+import sneakersReducer from "./sneakersapi/sneakers-reducer";
+import PublicProfile from "./public-profile/"
 
 const store = configureStore({
     reducer: {

@@ -3,6 +3,7 @@ import './App.css';
 import StartingPage from "./fashionWeb";
 import {BrowserRouter} from "react-router-dom";
 import {Routes, Route} from "react-router";
+import PublicProfile from "./fashionWeb/public-profile";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Routes>
             <Route index element={<StartingPage/>}/>
             <Route path="/*" element={<StartingPage/>}/>
+            <Route path="/profile/*" element={<PublicProfile/>}/>
         </Routes>
     </BrowserRouter>
   );

@@ -5,7 +5,8 @@ import {
     loginThunk,
     profileThunk,
     logoutThunk,
-    updateUserThunk
+    updateUserThunk,
+    findUserByIdThunk
 } from "./users-thunk";
 
 
@@ -60,6 +61,8 @@ const usersReducer = createSlice({
                     ...payload
                 }
             }
+        //TODO: finding user by id thunk implement if it's necessary
+//        [findUserByIdThunk.fulfilled]:
 
 
     }
