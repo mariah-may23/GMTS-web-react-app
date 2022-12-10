@@ -1,5 +1,5 @@
 import React from "react";
-import DetailsList from "./index";
+import DetailsList from "./detailspage";
 
 const Details = () => {
     return (

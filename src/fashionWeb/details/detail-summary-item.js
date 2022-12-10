@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+
 const DetailsItem = (
     {
         details = {}
@@ -52,7 +52,6 @@ const DetailsItem = (
 
                     <h5>{details.price}</h5>
                     <div className="position-relative">
-                            <Link>
                                 <span>
                                 <button type ="button" className="btn btn-dark bg-black border border-dark text-white fw-bold rounded mt-4">Add To Bag</button>
                                 </span>
@@ -61,7 +60,6 @@ const DetailsItem = (
                                     <i className="bi bi-heart ms-2"></i>
                                 </button>
                                 </span>
-                            </Link>
                     </div>
                     <div className="pt-4"></div>
                 </div>
