@@ -9,7 +9,7 @@ import EditProfilePage from "./edit-profile"
 import profileReducer from "./profile/profile-reducer"
 import Search from "./search/search-component";
 import searchReducer from "./search/search-reducer";
-import Details from "./details-summary-list/details-component";
+import Details from "./details/details-component";
 import UserList from "./users";
 import usersReducer from "./users/users-reducer";
 import Register from "./users/register";
@@ -17,11 +17,13 @@ import Login from "./users/login";
 import CurrentUser from "./users/current-user";
 import SneakerSearch from "./sneakersapi/sneakers-search";
 import sneakersReducer from "./sneakersapi/sneakers-reducer"
+import detailsReducer from "./details/details-reducer";
 
 const store = configureStore({
     reducer: {
         profile: profileReducer,
         search: searchReducer,
+        details: detailsReducer,
         user: usersReducer,
         sneakers: sneakersReducer
     }

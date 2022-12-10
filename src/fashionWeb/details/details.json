@@ -1,0 +1,17 @@
+[
+  {
+    "userName": "The North Face",
+    "_id": "1996 Retro Nuptse Jacket",
+    "size": "Medium",
+    "color": "Black",
+    "imagefront": "/images/northfacefront.jpeg",
+    "imageback": "/images/northfaceback.jpeg",
+    "price": "$467",
+    "handle": "@nicoderi",
+    "information": "Black 1996 Retro Nuptse jacket from The North Face featuring a high standing collar, a front zip fastening, a contrast embroidered logo at the chest, zipped side pockets, long sleeves, a logo to the back and a padded interior.",
+    "origin": "Imported",
+    "composition" : "Nylon 100%",
+    "washinginstructions" : "Machine Wash"
+  }
+
+]

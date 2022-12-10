@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+
 const DetailsItem = (
     {
         details = {}
@@ -33,9 +33,9 @@ const DetailsItem = (
                            <i className="bi bi-box-arrow-right"></i>
                             <span className="ms-2"></span>
                         </span>
-                        </h5>
-                    </div>
+                    </h5>
                 </div>
+            </div>
 
             <div className="row m-3">
                 <div className="col-4 p-2">
@@ -52,30 +52,28 @@ const DetailsItem = (
 
                     <h5>{details.price}</h5>
                     <div className="position-relative">
-                            <Link>
                                 <span>
                                 <button type ="button" className="btn btn-dark bg-black border border-dark text-white fw-bold rounded mt-4">Add To Bag</button>
                                 </span>
-                                <span>
+                        <span>
                                 <button type ="button" className="ms-2 btn btn-white bg-white border border-dark text-black fw-bold rounded mt-4">Wishlist
                                     <i className="bi bi-heart ms-2"></i>
                                 </button>
                                 </span>
-                            </Link>
                     </div>
                     <div className="pt-4"></div>
                 </div>
             </div>
 
             <div>
-                    <ul className="nav nav-pills text-black ms-2">
-                        <li className="nav-item">
-                            <a className="nav-link">THE DETAILS</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link">DELIVERY & RETURNS</a>
-                        </li>
-                    </ul>
+                <ul className="nav nav-pills text-black ms-2">
+                    <li className="nav-item">
+                        <a className="nav-link">THE DETAILS</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link">DELIVERY & RETURNS</a>
+                    </li>
+                </ul>
                 <div className="m-4">
                     <hr></hr>
                 </div>
@@ -85,35 +83,63 @@ const DetailsItem = (
 
 
             <div className="row ps-4 pt-2 pb-4">
-                    <div className="col-5">
-                        <h5 className=" fw-bolder ">{details.userName}</h5>
-                        <h6 className=" fw-light">{details._id}</h6>
+                <div className="col-5">
+                    <h5 className=" fw-bolder ">{details.userName}</h5>
+                    <h6 className=" fw-light">{details._id}</h6>
 
-                        <br></br>
-                        <div className="fw-normal">{details.information}</div>
+                    <br></br>
+                    <div className="fw-normal">{details.information}</div>
 
-                        <br></br>
-                        <div className="fw-normal">{details.origin}</div>
+                    <br></br>
+                    <div className="fw-normal">{details.origin}</div>
 
-                    </div>
+                </div>
 
-                    <div className="col-1">
-                    </div>
+                <div className="col-1">
+                </div>
 
-                    <div className="col-6">
-                        <h6 className="fw-semibold">Composition</h6>
-                        <h6 className="fw-light">{details.composition}</h6>
-                        <br></br>
+                <div className="col-6">
+                    <h6 className="fw-semibold">Composition</h6>
+                    <h6 className="fw-light">{details.composition}</h6>
+                    <br></br>
 
-                        <h6 className="fw-semibold">Washing Instructions</h6>
-                        <h6 className="fw-light">{details.washinginstructions}</h6>
-                        <br></br>
+                    <h6 className="fw-semibold">Washing Instructions</h6>
+                    <h6 className="fw-light">{details.washinginstructions}</h6>
+                    <br></br>
 
-                    </div>
+                </div>
 
 
             </div>
 
+{/*//    "userName": "Gucci",*/}
+{/*//    "_id": "Rhyton Interlocking G Sneakers",*/}
+{/*//    "size": "38",*/}
+{/*//    "color": "Beige",*/}
+{/*//    "imageback": "/images/guccifront.webp",*/}
+{/*//    "imagefront": "/images/gucciside.webp",*/}
+{/*//    "price": "$990",*/}
+{/*//    "handle": "@ngken",*/}
+{/*//    "information": "Not your plain white sneaker. Gucci's interpretation of your go-to pair of shoes comes in the shape of these Rhyton Interlocking G sneakers, embellished with the house's signature Web detail to the side. Putting your best foot forward won't be an issue.",*/}
+{/*//    "origin": "Made in Italy",*/}
+{/*//    "composition" : "Leather 100%",*/}
+{/*//    "washinginstructions" : "Hand Wash"*/}
+{/*//  }*/}
+{/*//,*/}
+{/*//  {*/}
+{/*//    "userName": "Burberry",*/}
+{/*//    "_id": "Vintage Check Kilt",*/}
+{/*//    "size": "Small",*/}
+{/*//    "color": "Multi-color",*/}
+{/*//    "imageback": "/images/burberryskirt.jpeg",*/}
+{/*//    "imagefront": "/images/burberryskirtperson.webp",*/}
+{/*//    "price": "$1,050",*/}
+{/*//    "handle": "@nicoderi",*/}
+{/*//    "information": "Pioneers of reinvention, Burberry knows how to mash-up styles, patterns and branding and produce something that still remains timeless. Case in point: this Vintage Check kilt. Characterised by the iconic Vintage Check and a raw pleated design, this classic yet punk piece has it all.",*/}
+{/*//    "origin": "Made in United Kingdom",*/}
+{/*//    "composition" : "Wool 100%",*/}
+{/*//    "washinginstructions" : "Dry Clean Only"*/}
+{/*//  }*/}
 
         </li>
     );

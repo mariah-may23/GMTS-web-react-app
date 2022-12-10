@@ -1,5 +1,5 @@
 import React from "react";
-import DetailsList from "./index";
+import DetailsList from "./detailspage";
 
 const Details = () => {
     return (
@@ -14,9 +14,9 @@ const Details = () => {
                 {/*<i className="wd-bottom-4 text-primary float-end bi*/}
                 {/*       bi-gear-fill fs-2 position-relative"></i>*/}
             </div>
-        <DetailsList/>
+            <DetailsList/>
         </div>
-        );
+    );
 
 }
 export default Details;
