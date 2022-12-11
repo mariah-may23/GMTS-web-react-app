@@ -1,4 +1,5 @@
 import React from "react";
+import LikeButton from "./like-button";
 
 const DetailsItem = (
     {
