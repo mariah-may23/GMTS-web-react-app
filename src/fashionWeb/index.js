@@ -28,6 +28,8 @@ const store = configureStore({
     }
 });
 
+
+
 function GMTSfashion() {
     return(
         <Provider store={store}>
@@ -36,6 +38,7 @@ function GMTSfashion() {
                     <Route path="" element={<HomePage/>}/>
                     <Route path="search" element={<Search/>}/>
                     <Route path="profile" element={<ProfilePage/>}/>
+                    <Route path="profile/uid" element={<PublicProfile/>}/>
                     <Route path="edit-profile" element={<EditProfilePage/>}/>
                      <Route path="details" element={<Details/>}/>
                      <Route path="/users" element={<UserList/>}/>

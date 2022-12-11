@@ -6,9 +6,20 @@ import React, {useEffect, useState} from "react";
 const PublicProfileComponent = () => {
     const {currentUser} = useSelector((state) => state.user);
 
-    return(
-        <h1> This is public profile Page for </h1>
+    const clickHandler = (e) => {
+        console.log(e.currentTarget.textContent);
+    }
 
+    return(
+    <>
+        <h1>
+            This is public profile Page for
+        </h1>
+
+        <div onClick={clickHandler}>
+            Alice
+        </div>
+    </>
     );
 }
 

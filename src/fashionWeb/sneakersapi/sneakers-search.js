@@ -13,12 +13,7 @@ const SneakersSearch = () => {
     //call thunk with dispatch to find by term
     const dispatch = useDispatch()
 
-    // THIS IS NOT PROPER USEEFFECT SO DISREGARD OR UPDATE LATER
-    useEffect(() => {
-        if(searchTerm){
-            dispatch(findSneakerBySearchTermThunk(searchTerm))
-        }
-    }, [])
+
 
 
     return(

@@ -27,7 +27,6 @@ export const findSneakerBySearchTerm = async (term) => {
         console.error(error);
     });
 
-//    return response;
 
 
 
