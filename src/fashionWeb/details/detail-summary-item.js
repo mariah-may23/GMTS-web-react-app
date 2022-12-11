@@ -67,7 +67,9 @@ const DetailsItem = (
                     <h5>{details.price}</h5>
                     <div className="position-relative">
                     {/*   LikeStats goes here */}
-
+                        <>
+                        <LikeButton></LikeButton>
+                        </>
                     </div>
                     <div className="pt-4"></div>
                 </div>
