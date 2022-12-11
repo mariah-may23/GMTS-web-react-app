@@ -16,8 +16,9 @@ import Register from "./users/register";
 import Login from "./users/login";
 import CurrentUser from "./users/current-user";
 import SneakerSearch from "./sneakersapi/sneakers-search";
-import sneakersReducer from "./sneakersapi/sneakers-reducer"
+import sneakersReducer from "./sneakersapi/sneakers-reducer";
 import detailsReducer from "./details/details-reducer";
+import ProfileDetails from "./public-profile/ProfileDetails";
 
 const store = configureStore({
     reducer: {
@@ -38,11 +39,14 @@ function GMTSfashion() {
                     <Route path="search" element={<Search/>}/>
                     <Route path="profile" element={<ProfilePage/>}/>
                     <Route path="edit-profile" element={<EditProfilePage/>}/>
+
+                    <Route path="profile/:uid" element={<ProfileDetails/>}/>
+
                      <Route path="details" element={<Details/>}/>
                      <Route path="/users" element={<UserList/>}/>
                      <Route path="/register" element={<Register/>}/>
                      <Route path="/login" element={<Login/>}/>
-                     <Route path="/sneakers" element={<SneakerSearch/>}/>
+//                     <Route path="/sneakers" element={<SneakerSearch/>}/>
                 </Routes>
             </CurrentUser>
         </Provider>
