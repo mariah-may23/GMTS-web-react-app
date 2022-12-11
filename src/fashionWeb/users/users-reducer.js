@@ -5,8 +5,9 @@ import {
     loginThunk,
     profileThunk,
     logoutThunk,
-    updateUserThunk
+    updateUserThunk, findUserByIdThunk
 } from "./users-thunk";
+import {findUserById} from "./users-service";
 
 
 const usersReducer = createSlice({
@@ -15,12 +16,18 @@ const usersReducer = createSlice({
         loading: false,
         users: [],
         currentUser: null,
+        publicUser: null,
         error:null
     },
     reducers: {
 
     },
     extraReducers: {
+        [findUserByIdThunk.fulfilled]:(state,action) => {
+            state.publicUser = action.payload
+            console.log("publicUser")
+            console.log(state.publicUser)
+        },
         [findAllUsersThunk.fulfilled]: (state,action) => {
             state.users = action.payload
         },
