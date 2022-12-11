@@ -26,6 +26,10 @@ const Register = () => {
     const [zipcode, setZipcode] = useState('zippy')
     const [email, setEmail] = useState('email@com')
 
+    const [type, setType] = useState('BUYER')
+
+
+
     const [error, setError] = useState(null)
     const {currentUser} = useSelector((state) => state.user)
     const dispatch = useDispatch()
@@ -38,7 +42,7 @@ const Register = () => {
 
         setError(null)
         const newUser = {userName, password, firstName, lastName, dateJoined, dateOfBirth, zipcode,
-            address1, address2, city, state, email }
+            address1, address2, city, state, email, type }
 
         dispatch(registerThunk(newUser))
 
@@ -137,12 +141,28 @@ const Register = () => {
                             value={email}
                             onChange={(e)=> setEmail(e.target.value)}/>
                     </label>
+
+                        <div>
+                        <label>I am a:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <label className="btn ">
+                            <input type="radio" name="options" id="option1"
+                                   value="BUYER"
+                                   onChange={(e)=> setType(e.target.value)}/>
+                            Buyer
+                        </label>
+                        <label className="btn ">
+                            <input type="radio" name="options" id="option2"
+                                   value="SELLER"
+                                   onChange={(e)=> setType(e.target.value)}/>
+                           Seller
+                        </label>
+                        </div>
                     <button onClick={handleRegisterButton} className="btn btn-primary w-100">
                         Register
                     </button>
                     {
                         currentUser &&
-                        <h2 className="wd-profile-title">welcome {currentUser.userName}</h2>
+                        <h2 className="wd-profile-title text-black">welcome {currentUser.userName}</h2>
 
                     }
                 </div>

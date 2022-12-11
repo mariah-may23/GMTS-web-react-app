@@ -3,17 +3,19 @@ import {Link} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import userInfo from "./profileInfo";
 import PurchasedList from "./purchased-list";
-import {logoutThunk} from "../users/users-thunk";
+import {logoutThunk, profileThunk} from "../users/users-thunk";
 
 
 const ProfileComponent = () =>{
     const {currentUser} = useSelector((state) => state.user);
     const loggedIn = true;
     const dispatch = useDispatch()
+
     const handleLogout = () => {
         dispatch(logoutThunk())
         window.location = "/"
     }
+    console.log(currentUser)
 
 
     return(
