@@ -15,8 +15,10 @@ const Login = () => {
         const loginUser = {userName, password }
         console.log(loginUser);
         dispatch(loginThunk(loginUser))
-        //setTimeout(window.location = "/",200)
-        setTimeout(200000000000000)
+        alert(`Welcome!`)
+        setTimeout(window.location = "/",30000000000000000)
+
+
 
 
     }
@@ -44,11 +46,7 @@ const Login = () => {
                     <button onClick={handleLoginButton} className="btn btn-primary w-100">
                         Login
                     </button>
-                    {
-                        currentUser &&
-                        <h2>welcome {currentUser.userName}</h2>
 
-                    }
                 </div>
             </div>
         </>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import Tabs from "./tabs"
+import {Link} from "react-router-dom";
 import "./index.css"
 import Content from "./personal-content";
 import {useDispatch, useSelector} from "react-redux";
@@ -20,9 +20,12 @@ const HomePage = () => {
                     <form className="d-flex">
                         <input className="form-control me-sm-2" type="text"
                                placeholder="Search"/>
-                        <button className="btn btn-dark my-2 my-sm-0"
-                                type="submit">Search
+                        <Link to="/search"> <button className="btn btn-dark my-2 my-sm-0"
+                                type="submit">
+
+                            Search
                         </button>
+                        </Link>
                     </form>
 
                 </div>
@@ -65,7 +68,7 @@ const HomePage = () => {
                     </div>
                 }
             </div >
-            <Tabs/>
+
 
 
     

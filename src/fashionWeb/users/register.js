@@ -45,6 +45,7 @@ const Register = () => {
             address1, address2, city, state, email, type }
 
         dispatch(registerThunk(newUser))
+        setTimeout(window.location = "/",3000000000000)
 
 
 
