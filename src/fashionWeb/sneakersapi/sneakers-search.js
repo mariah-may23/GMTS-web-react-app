@@ -43,10 +43,10 @@ const SneakersSearch = () => {
                 {!loading && sneakers &&
                     sneakers.map((sneaker) =>
 
-                        <li key={sneaker._id} className="text-white">
-                            console.log("mapping now")
-                            console.log(sneaker.shoeName);
-                            sneaker.shoeName
+                        <li key={sneaker._id} className="text-black">
+                            {/*console.log("mapping now")*/}
+                            {/*console.log(sneaker.shoeName);*/}
+                            {sneaker.shoeName}
                         </li>
                     )
                 }

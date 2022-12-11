@@ -2,7 +2,21 @@ import React from "react";
 
 const DetailsItem = (
     {
-        details = {}
+        details = {
+            "userName": "Gucci",
+            "_id": "Rhyton Interlocking G Sneakers",
+            "size": "38",
+            "color": "Beige",
+            "imageback": "/images/guccifront.webp",
+            "imagefront": "/images/gucciside.webp",
+            "price": "$990",
+            "handle": "@ngken",
+            "information": "Not your plain white sneaker. Gucci's interpretation of your go-to pair of shoes comes in the shape of these Rhyton Interlocking G sneakers, embellished with the house's signature Web detail to the side. Putting your best foot forward won't be an issue.",
+            "origin": "Made in Italy",
+            "composition" : "Leather 100%",
+            "washinginstructions" : "Hand Wash",
+            "liked" : "true",
+}
     }
 ) => {
     return(
@@ -52,14 +66,8 @@ const DetailsItem = (
 
                     <h5>{details.price}</h5>
                     <div className="position-relative">
-                                <span>
-                                <button type ="button" className="btn btn-dark bg-black border border-dark text-white fw-bold rounded mt-4">Add To Bag</button>
-                                </span>
-                        <span>
-                                <button type ="button" className="ms-2 btn btn-white bg-white border border-dark text-black fw-bold rounded mt-4">Wishlist
-                                    <i className="bi bi-heart ms-2"></i>
-                                </button>
-                                </span>
+                    {/*   LikeStats goes here */}
+
                     </div>
                     <div className="pt-4"></div>
                 </div>
@@ -112,34 +120,6 @@ const DetailsItem = (
 
             </div>
 
-{/*//    "userName": "Gucci",*/}
-{/*//    "_id": "Rhyton Interlocking G Sneakers",*/}
-{/*//    "size": "38",*/}
-{/*//    "color": "Beige",*/}
-{/*//    "imageback": "/images/guccifront.webp",*/}
-{/*//    "imagefront": "/images/gucciside.webp",*/}
-{/*//    "price": "$990",*/}
-{/*//    "handle": "@ngken",*/}
-{/*//    "information": "Not your plain white sneaker. Gucci's interpretation of your go-to pair of shoes comes in the shape of these Rhyton Interlocking G sneakers, embellished with the house's signature Web detail to the side. Putting your best foot forward won't be an issue.",*/}
-{/*//    "origin": "Made in Italy",*/}
-{/*//    "composition" : "Leather 100%",*/}
-{/*//    "washinginstructions" : "Hand Wash"*/}
-{/*//  }*/}
-{/*//,*/}
-{/*//  {*/}
-{/*//    "userName": "Burberry",*/}
-{/*//    "_id": "Vintage Check Kilt",*/}
-{/*//    "size": "Small",*/}
-{/*//    "color": "Multi-color",*/}
-{/*//    "imageback": "/images/burberryskirt.jpeg",*/}
-{/*//    "imagefront": "/images/burberryskirtperson.webp",*/}
-{/*//    "price": "$1,050",*/}
-{/*//    "handle": "@nicoderi",*/}
-{/*//    "information": "Pioneers of reinvention, Burberry knows how to mash-up styles, patterns and branding and produce something that still remains timeless. Case in point: this Vintage Check kilt. Characterised by the iconic Vintage Check and a raw pleated design, this classic yet punk piece has it all.",*/}
-{/*//    "origin": "Made in United Kingdom",*/}
-{/*//    "composition" : "Wool 100%",*/}
-{/*//    "washinginstructions" : "Dry Clean Only"*/}
-{/*//  }*/}
 
         </li>
     );

@@ -18,14 +18,17 @@ export const findSneakerBySearchTerm = async (term) => {
           }
         };
 
-
-    axios.request(options).then(res => {
-        console.log(res.data);
-        return res.data
-    }).catch(function (error) {
-        console.log("error occurring");
-        console.error(error);
-    });
+    const response = await axios.request(options);
+    console.log(response.data);
+    return response.data;
+    // axios.request(options).then(res => {
+    //     console.log(res.data);
+    //     return res.data
+    // }).catch(function (error) {
+    //     console.log("error occurring");
+    //     console.error(error);
+    // });
+    // console.log("TESTSSS")
 
 //    return response;
 
