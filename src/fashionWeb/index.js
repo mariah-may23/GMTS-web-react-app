@@ -46,7 +46,7 @@ function GMTSfashion() {
                      <Route path="/users" element={<UserList/>}/>
                      <Route path="/register" element={<Register/>}/>
                      <Route path="/login" element={<Login/>}/>
-//                     <Route path="/sneakers" element={<SneakerSearch/>}/>
+                     {/*<Route path="/sneakers" element={<SneakerSearch/>}/>*/}
                 </Routes>
             </CurrentUser>
         </Provider>
