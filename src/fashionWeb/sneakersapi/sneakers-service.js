@@ -12,7 +12,6 @@ export const findSneakerBySearchTerm = async (term) => {
         {
             method: 'GET',
             url: `https://sneaker-database-stockx.p.rapidapi.com/getproducts?keywords=+${term}&limit=12?`,
-            params: {keywords: 'yeezy', limit: '5'},
             headers: {
                 'X-RapidAPI-Key': '389bc1f3cdmsh6009a93e5c1e541p10147ajsnd8f843773938',
                 'X-RapidAPI-Host': 'sneaker-database-stockx.p.rapidapi.com'
