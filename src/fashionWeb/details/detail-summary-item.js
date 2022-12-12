@@ -1,25 +1,16 @@
 import React from "react";
 import LikeButton from "./like-button";
+import {useDispatch, useSelector} from "react-redux";
+import {useParams, Link} from "react-router-dom"
 
-const DetailsItem = (
-    {
-        details = {
-            "userName": "Gucci",
-            "_id": "Rhyton Interlocking G Sneakers",
-            "size": "38",
-            "color": "Beige",
-            "imageback": "/images/guccifront.webp",
-            "imagefront": "/images/gucciside.webp",
-            "price": "$990",
-            "handle": "@ngken",
-            "information": "Not your plain white sneaker. Gucci's interpretation of your go-to pair of shoes comes in the shape of these Rhyton Interlocking G sneakers, embellished with the house's signature Web detail to the side. Putting your best foot forward won't be an issue.",
-            "origin": "Made in Italy",
-            "composition" : "Leather 100%",
-            "washinginstructions" : "Hand Wash",
-            "liked" : "true",
-}
-    }
-) => {
+const details = {};
+
+const DetailsItem = () => {
+    const {sid} = useParams();
+    const dispatch = useDispatch()
+
+    const {sneakers, loading} = useSelector((state) => state.sneakers);
+    console.log(sneakers);
     return(
         <li className="list-group-item">
             <div className="row">
@@ -128,3 +119,26 @@ const DetailsItem = (
     );
 };
 export default DetailsItem;
+
+
+/*
+
+{
+        details = {
+            "userName": "Gucci",
+            "_id": "Rhyton Interlocking G Sneakers",
+            "size": "38",
+            "color": "Beige",
+            "imageback": "/images/guccifront.webp",
+            "imagefront": "/images/gucciside.webp",
+            "price": "$990",
+            "handle": "@ngken",
+            "information": "Not your plain white sneaker. Gucci's interpretation of your go-to pair of shoes comes in the shape of these Rhyton Interlocking G sneakers, embellished with the house's signature Web detail to the side. Putting your best foot forward won't be an issue.",
+            "origin": "Made in Italy",
+            "composition" : "Leather 100%",
+            "washinginstructions" : "Hand Wash",
+            "liked" : "true",
+}
+    }
+
+    */
