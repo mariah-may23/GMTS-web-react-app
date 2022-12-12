@@ -26,7 +26,6 @@ const DetailsItem = () => {
                     <h5 className="text-black float-end">
                         <span className="ms-2" >
                             <i className="bi bi-patch-plus"></i>
-                            <span className="ms-2"></span>
                         </span>
 
                         <span className="ms-2">

@@ -15,11 +15,8 @@ const Login = () => {
         const loginUser = {userName, password }
         console.log(loginUser);
         dispatch(loginThunk(loginUser))
-        alert(`Welcome!`)
+        alert(`Welcome ${currentUser.firstName}!`)
         setTimeout(window.location = "/",30000000000000000)
-
-
-
 
     }
     return (

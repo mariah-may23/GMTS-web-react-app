@@ -3,15 +3,22 @@ import Homepage from "./homepage";
 import "./index.css"
 import Slides from "./slideshow";
 import Content from "./personal-content";
+import PopularSneakersSearch from "../popular-sneakersapi/popular-sneakers-search";
+import {useSelector} from "react-redux";
+
 
 
 const HomeComponent = () => {
+    const {currentUser} = useSelector((state)=> state.user)
     return(
         <>
 
             <Homepage/>
             <Slides/>
-            <Content/>
+            {!currentUser &&
+             <PopularSneakersSearch/>
+            }
+
 
 
 
