@@ -5,7 +5,7 @@ import SneakerItem from "./sneaker-item";
 
 
 const SneakersSearch = () => {
-    const [searchTerm, setSearchTerm] = useState('adidas')
+    const [searchTerm, setSearchTerm] = useState('')
     const {sneakers, loading} = useSelector((state) => state.sneakers)
     console.log(loading);
 
@@ -88,13 +88,12 @@ const SneakersSearch = () => {
 
                         <div className="row">
                             {!loading && sneakers &&
-                                sneakers.map(item =>
+                                sneakers.map((item) =>
                                     <div className="col-12 col-sm-6 col-lg-4 col-xxl-3 mt-3 d-flex align-items-stretch">
-                                        console.log("trying to print item id")
-                                        console.log(item._id)
                                         <SneakerItem
                                             key={item._id}
-                                            search={item}/>
+                                            search={item}
+                                            />
                                     </div>
                                 )
                             }

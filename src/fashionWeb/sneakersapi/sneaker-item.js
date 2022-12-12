@@ -1,39 +1,39 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
+import Details from "../details/details-component";
 
-const SneakerItem = ({item}) => {
+const SneakerItem = (
+    {
+        search = {
+
+        }
+    }
+) => {
+
+
     return (
         <div className="card" style={{width: "18rem"}}>
-            <img className="card-img-top h-100" src={item.thumbnail} alt="Card image cap"/>
+            <img className="card-img-top h-100" src={search.thumbnail} alt="Card image cap"/>
             <div className="card-body">
-                <h5 className="card-title">{item.shoeName}</h5>
+                <h5 className="card-title">{search.shoeName}</h5>
                 <p className="card-text">
                     <ul className="list-unstyled">
-                        <li>Color: {item.colorway}</li>
-                        <li>Size: {item.size}</li>
-                        <li>Brand: {item.brand}</li>
+                        <li>Color: {search.colorway}</li>
+                        <li>Size: {search.size}</li>
+                        <li>Brand: {search.brand}</li>
+                        {/*CHANGE USER!!!!*/}
                         <li>User: Blobb</li>
                     </ul>
                 </p>
-                <Link to={`/detail/${item._id}`}>
-                <button className="btn btn-primary">Details</button>
+                <Link
+                    to={`/details/${search._id}`}
+                    className="btn btn-primary">
+                    Details
                 </Link>
-                <h4 className="float-end fw-bolder"> ${item.retailPrice}</h4>
+                <h4 className="float-end fw-bolder"> ${search.retailPrice}</h4>
             </div>
         </div>
     );
 }
 
 export default SneakerItem;
-/*
- {
-        search = {
-            // "_id": "001",
-            // "title": "Dirty Vintage Shirt",
-            // "price": 99,
-            // "image": "https://i.ebayimg.com/images/g/PTkAAOSwz89hggPf/s-l1600.jpg",
-            // "color": "White",
-            // "size": "L",
-            // "brand": "Adidas"
-        }
-    }*/
