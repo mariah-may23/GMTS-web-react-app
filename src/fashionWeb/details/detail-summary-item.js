@@ -8,11 +8,12 @@ const details = {};
 const DetailsItem = () => {
     const {sid} = useParams();
     const dispatch = useDispatch()
-    console.log(sid);
+
 
     const {sneakers} = useSelector((state) => state.sneakers,);
 
     const details = sneakers.find(m => m._id === sid)
+    console.log(details)
 
     return(
         <li className="list-group-item">
@@ -61,7 +62,7 @@ const DetailsItem = () => {
                     <div className="position-relative">
                     {/*   LikeStats goes here */}
                         <>
-                        <LikeButton></LikeButton>
+                        <LikeButton key={details._id} post={details}/>
                         </>
                     </div>
                     <div className="pt-4"></div>

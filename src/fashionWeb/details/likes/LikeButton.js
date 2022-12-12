@@ -12,38 +12,42 @@ const particleList = Array.from(Array(10));
 
 
 
-const LikeButton = () => {
+const LikeButton = ({details}) => {
     const [liked, setLiked] = useState(null);
     const [clicked, setClicked] = useState(false);
     const dispatch = useDispatch();
     const {sid} = useParams();
     const {currentUser} = useSelector((state) => state.user)
 
+    const likeHandler = () => {
+            if( currentUser === null){
+                alert(`Please login to like the product!`)
+                setTimeout(window.location="/login")
+             }else{
+                const newLike = {
+                    item_id: sid,
+                    uid: currentUser.uid
+                }
+                dispatch(userLikesSneakerThunk(newLike));
+                setLiked(!liked);
+                setClicked(true);
+
+
+        }
+        }
+
+
 
 
     return (
         <button
-            onClick={() => {
-                if( currentUser === null){
-                    alert(`Please login to like the product!`)
-                    setTimeout(window.location="/login")
-                 }else{
-                    setLiked(!liked);
-                    setClicked(true);
-                 }
-                dispatch(userLikesSneakerThunk({
-                    sneaker_id: sid,
-                    userName: currentUser
-                                               }))
-
-            }}
+            onClick={likeHandler}
             onAnimationEnd={() => setClicked(false)}
             className={cn("like-button-wrapper", {
                 liked,
                 clicked,
             })
-        }
-        >
+        }>
             {liked && (
                 <div className="particles">
                     {particleList.map((_, index) => (
@@ -66,7 +70,7 @@ const LikeButton = () => {
                 <span className={cn("suffix", { liked })}>d</span>
             </div>
         </button>
-    );
-};
+    )};
+
 
 export default LikeButton;

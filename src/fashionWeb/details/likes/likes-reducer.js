@@ -8,16 +8,16 @@ const initialState = {
 
 
 const likesSlice = createSlice({
-                                      name: 'likes',
-                                      initialState,
-                                      extraReducers:{
-                                          [userLikesSneakerThunk.fulfilled]:
-                                              (state, {payload}) => {
-                                                  state.loading = false
-                                                  state.likes.push(payload)
-                                              },
-                                      }
-                                  })
+      name: 'likes',
+      initialState,
+      extraReducers:{
+          [userLikesSneakerThunk.fulfilled]:
+              (state, {payload}) => {
+                  state.loading = false
+                  state.likes.push(payload)
+              },
+      }
+})
 
 export default likesSlice.reducer;
 

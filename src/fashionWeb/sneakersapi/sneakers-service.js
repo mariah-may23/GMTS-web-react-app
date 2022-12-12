@@ -13,7 +13,7 @@ export const findSneakerBySearchTerm = async (term) => {
             method: 'GET',
             url: `https://sneaker-database-stockx.p.rapidapi.com/getproducts?keywords=+${term}&limit=12?`,
             headers: {
-                'X-RapidAPI-Key': '389bc1f3cdmsh6009a93e5c1e541p10147ajsnd8f843773938',
+                'X-RapidAPI-Key': '6c56ba573amsheeaa55c22cbb547p14f36ajsn6f8e46bc0b35',
                 'X-RapidAPI-Host': 'sneaker-database-stockx.p.rapidapi.com'
             }
         }
