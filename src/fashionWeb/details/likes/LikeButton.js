@@ -10,6 +10,8 @@ import {userLikesSneakerThunk} from "./likes-thunk";
 const particleList = Array.from(Array(10));
 
 
+
+
 const LikeButton = () => {
     const [liked, setLiked] = useState(null);
     const [clicked, setClicked] = useState(false);
@@ -18,11 +20,17 @@ const LikeButton = () => {
     const {currentUser} = useSelector((state) => state.user)
 
 
+
     return (
         <button
             onClick={() => {
-                setLiked(!liked);
-                setClicked(true);
+                if( currentUser === null){
+                    alert(`Please login to like the product!`)
+                    setTimeout(window.location="/login")
+                 }else{
+                    setLiked(!liked);
+                    setClicked(true);
+                 }
                 dispatch(userLikesSneakerThunk({
                     sneaker_id: sid,
                     userName: currentUser

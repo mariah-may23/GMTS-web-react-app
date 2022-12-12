@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import "./index.css"
-import Content from "./personal-content";
 import {useDispatch, useSelector} from "react-redux";
 import {profileThunk} from "../users/users-thunk";
 
