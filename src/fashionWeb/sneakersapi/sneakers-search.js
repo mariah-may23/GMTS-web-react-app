@@ -90,6 +90,7 @@ const SneakersSearch = () => {
                             {!loading && sneakers &&
                                 sneakers.map(item =>
                                     <div className="col-12 col-sm-6 col-lg-4 col-xxl-3 mt-3 d-flex align-items-stretch">
+                                        console.log("trying to print item id")
                                         console.log(item._id)
                                         <SneakerItem
                                             key={item._id}
