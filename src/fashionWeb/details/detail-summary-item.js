@@ -1,5 +1,5 @@
 import React from "react";
-import LikeButton from "./like-button";
+import LikeButton from "./likes";
 import {useDispatch, useSelector, shallowEqual} from "react-redux";
 import {useParams, Link} from "react-router-dom"
 
