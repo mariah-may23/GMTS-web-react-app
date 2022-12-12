@@ -20,6 +20,7 @@ import sneakersReducer from "./sneakersapi/sneakers-reducer";
 import detailsReducer from "./details/details-reducer";
 import ProfileDetails from "./public-profile/ProfileDetails";
 import commentsReducer from "./details/comments/comments-reducer";
+import likesReducer from "./details/likes/likes-reducer";
 
 const store = configureStore({
     reducer: {
@@ -28,7 +29,8 @@ const store = configureStore({
         details: detailsReducer,
         user: usersReducer,
         sneakers: sneakersReducer,
-        comment: commentsReducer
+        comment: commentsReducer,
+        likes: likesReducer
     }
 });
 
@@ -49,7 +51,7 @@ function GMTSfashion() {
                      <Route path="/users" element={<UserList/>}/>
                      <Route path="/register" element={<Register/>}/>
                      <Route path="/login" element={<Login/>}/>
-//                     <Route path="/search" element={<SneakerSearch/>}/>
+                     <Route path="/search" element={<SneakerSearch/>}/>
                 </Routes>
             </CurrentUser>
         </Provider>
