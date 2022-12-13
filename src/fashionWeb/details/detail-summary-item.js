@@ -17,19 +17,8 @@ const DetailsItem = () => {
     console.log("checking sneakers whether it's null or not")
 
 
-    let details = null;
-    if(currentUser){
-        console.log("in the if currentuser")
-        details = sneakers.find(m => m._id === sid)
-        if(likes){
-            console.log(likes)
-            console.log(details)
-            details = likes.find(m => m._id === sid)
-            console.log(details)
-        }
-    }else{
-        details = sneakers.find(m => m._id === sid)
-    }
+    const details = sneakers.find(m => m._id === sid);
+
     console.log(details)
 
 

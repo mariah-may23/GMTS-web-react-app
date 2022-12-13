@@ -1,9 +1,11 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {findSneakerBySearchTermThunk} from "./sneakers-thunks";
+import {findSneakersLikedByUserThunk} from "../details/likes/likes-thunk";
 
 const initialState = {
     sneakers: [],
-    loading: true
+    loading: true,
+
 }
 const sneakersReducer = createSlice({
     name: 'sneaker',

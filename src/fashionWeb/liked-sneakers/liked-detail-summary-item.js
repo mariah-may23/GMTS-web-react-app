@@ -10,17 +10,22 @@ const LikedDetailsItem = () => {
     const {sid} = useParams();
     const dispatch = useDispatch()
 
-
+    const {sneakers} = useSelector(state => state.sneakers);
     const {likes} = useSelector((state) => state.likes);
-    console.log(likes)
+
+    const allSneakers = likes.concat(sneakers)
+    console.log(allSneakers)
 
 
 
-    const details = likes.find(m => m._id === sid)
+
+    const details = allSneakers.find(m => m._id === sid)
 
 
     return(
         <li className="list-group-item">
+        {allSneakers &&
+        <>
             <div className="row">
                 <div className="col-12 p-2">
                     <div>
@@ -29,7 +34,8 @@ const LikedDetailsItem = () => {
                                     <button className="bi bi-arrow-left text-white btn btn-dark"> </button>
                                 </Link>
                         </span>
-                        <span className="ms-1 border-bottom border-dark ">{details.shoeName}</span>
+                        <span className="ms-1 border-bottom border-dark ">{details.shoeName}
+                        </span>
                     </div>
                 </div>
             </div>
@@ -39,7 +45,6 @@ const LikedDetailsItem = () => {
                     <img className='rounded float-start border-grey border flex-wrap' width = "100%"
                          src={details.thumbnail}/>
                 </div>
-
                 <div className="col-12 col-xl-5 ps-5 pt-4">
                     <h5 className=" fw-bolder ">{details.brand}</h5>
                     <h6 className=" fw-light ">{details.shoeName}</h6>
@@ -84,12 +89,11 @@ const LikedDetailsItem = () => {
                 </div>
             </div>
 
-            <div className="p-4">
 
+            <div className="p-4">
                 THE DETAILS
                 <hr></hr>
             </div>
-
             <div className="row ps-4 pt-2 pb-4">
                 <div className="col-12">
                     <h5 className=" fw-bolder ">{details.shoeName}</h5>
@@ -101,17 +105,13 @@ const LikedDetailsItem = () => {
 
                 </div>
 
-                {/*<div className="col-1">*/}
-                {/*</div>*/}
-
                 <hr></hr>
 
             </div>
             <Comments/>
-            <div>
+        </>
+        }
 
-
-            </div>
         </li>
     );
 };
