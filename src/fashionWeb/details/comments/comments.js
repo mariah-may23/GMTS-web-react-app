@@ -23,8 +23,8 @@ const Comments = () => {
 
     return (
 
-        <div className="row">
-            <div className="col-10">
+        <div className="row rounded">
+            <div className="col-10 p-3">
                 <textarea value={commentContents} placeholder="What are your thoughts?"
                     className="form-control border-1"
                     onChange={(event) => setCommentContents(event.target.value)}>

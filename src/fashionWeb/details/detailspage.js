@@ -18,7 +18,7 @@ const DetailsList = () => {
                 {/*}*/}
                 <DetailsItem/>
                 <div className="mb-4"/>
-                <Comments/>
+                {/*<Comments/>*/}
             </ul>
         </>
     );
