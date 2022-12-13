@@ -17,8 +17,7 @@ const HomePage = () => {
             <div className="row bg-black mb-0">
                 <div className="col-3 mt-2">
                     <form className="d-flex">
-                        <input className="form-control me-sm-2" type="text"
-                               placeholder="Search"/>
+
                         <Link to="/search"> <button className="btn btn-dark my-2 my-sm-0"
                                 type="submit">
 
