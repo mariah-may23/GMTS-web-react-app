@@ -10,15 +10,9 @@ const DetailsList = () => {
     return(
         <>
             <ul className="list-group">
-                {/*{*/}
-                {/*    detailsArray.map(details =>*/}
-                {/*                         <DetailsItem*/}
-                {/*                             key={details._id}*/}
-                {/*                             details={details}/> )*/}
-                {/*}*/}
                 <DetailsItem/>
                 <div className="mb-4"/>
-                <Comments/>
+
             </ul>
         </>
     );
