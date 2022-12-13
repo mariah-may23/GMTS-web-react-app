@@ -12,12 +12,14 @@ const particleList = Array.from(Array(10));
 
 
 
-const LikeButton = ({details}) => {
+const LikeButton = ({details= {}}) => {
     const [liked, setLiked] = useState(null);
     const [clicked, setClicked] = useState(false);
     const dispatch = useDispatch();
     const {sid} = useParams();
     const {currentUser} = useSelector((state) => state.user)
+
+
 
     const likeHandler = () => {
             if( currentUser === null){
@@ -26,7 +28,18 @@ const LikeButton = ({details}) => {
              }else{
                 const newLike = {
                     item_id: sid,
-                    uid: currentUser.uid
+                    uid: currentUser.uid,
+                    shoeName:details.shoeName,
+                    brand:details.brand,
+                    silhoutte:details.silhoutte,
+                    styleID:details.styleID,
+                    make:details.make,
+                    colorway:details.colorway,
+                    retailPrice:details.retailPrice,
+                    thumbnail:details.thumbnail,
+                    releaseDate:details.releaseDate,
+                    description:details.description,
+                    urlKey:details.urlKey
                 }
                 dispatch(userLikesSneakerThunk(newLike));
                 setLiked(!liked);

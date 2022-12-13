@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {userLikesSneakerThunk} from "./likes-thunk";
+import {findSneakersLikedByUserThunk, userLikesSneakerThunk} from "./likes-thunk";
 
 const initialState = {
     likes: [],
     loading: false
 }
-
 
 const likesSlice = createSlice({
       name: 'likes',
@@ -16,6 +15,11 @@ const likesSlice = createSlice({
                   state.loading = false
                   state.likes.push(payload)
               },
+          [findSneakersLikedByUserThunk.fulfilled]:
+              (state, {payload}) => {
+                  state.loading = false
+                  state.likes.push(payload)
+              }
       }
 })
 

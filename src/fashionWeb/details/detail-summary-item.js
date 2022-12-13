@@ -62,7 +62,7 @@ const DetailsItem = () => {
                     <div className="position-relative">
                     {/*   LikeStats goes here */}
                         <>
-                        <LikeButton key={details._id} post={details}/>
+                        <LikeButton key={details._id} details={details}/>
                         </>
                     </div>
                     <div className="pt-4"></div>

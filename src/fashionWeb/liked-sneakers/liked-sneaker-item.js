@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 
-const PopularSneakerItem = (
+const LikedSneakerItem = (
     {
         search = {
 
@@ -15,7 +15,7 @@ const PopularSneakerItem = (
 
     return (
         <div className="card " style={{width: "18rem"}}>
-            <img className="card-img-top h-100" src={search.thumbnail} alt="Card image cap"/>
+            <img className="card-img-top h-100" src={search[0].thumbnail} alt="Card image cap"/>
             <div className="card-body">
                 <h5 className="card-title">{search.shoeName}</h5>
                 <p className="card-text">
@@ -38,4 +38,4 @@ const PopularSneakerItem = (
     );
 }
 
-export default PopularSneakerItem;
+export default LikedSneakerItem;
