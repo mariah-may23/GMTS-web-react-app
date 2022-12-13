@@ -10,10 +10,28 @@ const DetailsItem = () => {
     const {sid} = useParams();
     const dispatch = useDispatch()
 
+    const {currentUser} = useSelector(state => state.user);
+    const {sneakers} = useSelector((state) => state.sneakers);
+    const {likes} = useSelector((state) => state.likes);
 
-    const {sneakers} = useSelector((state) => state.sneakers,);
+    console.log("checking sneakers whether it's null or not")
 
-    const details = sneakers.find(m => m._id === sid)
+
+    let details = null;
+    if(currentUser){
+        console.log("in the if currentuser")
+        details = sneakers.find(m => m._id === sid)
+        if(likes){
+            console.log(likes)
+            console.log(details)
+            details = likes.find(m => m._id === sid)
+            console.log(details)
+        }
+    }else{
+        details = sneakers.find(m => m._id === sid)
+    }
+    console.log(details)
+
 
     return (
         <li className="list-group-item">

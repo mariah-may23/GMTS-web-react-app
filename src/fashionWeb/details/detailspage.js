@@ -15,12 +15,10 @@ const DetailsList = () => {
     return(
         <>
             <ul className="list-group">
-                {!currentUser || (currentUser && sneakers ) &&
-                <DetailsItem/>}
+
+                <DetailsItem/>
                 <div className="mb-4"/>
-                {likes && currentUser &&
-                 <LikedSneakerItemDetails/>
-                }
+
 
 
             </ul>

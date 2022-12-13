@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {useSelector} from "react-redux";
 import {findSneakersLikedByUserThunk, userLikesSneakerThunk} from "./likes-thunk";
 import {findSneakerBySearchTermThunk} from "../../sneakersapi/sneakers-thunks";
 
@@ -18,7 +19,6 @@ const likesSlice = createSlice({
               },
 
           [findSneakersLikedByUserThunk.fulfilled]: (state, action) => {
-
               state.likes = action.payload;
               state.loading = false;
           }

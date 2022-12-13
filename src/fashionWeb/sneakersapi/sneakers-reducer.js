@@ -17,7 +17,6 @@ const sneakersReducer = createSlice({
         },
 
         [findSneakerBySearchTermThunk.fulfilled]: (state, action) => {
-            console.log("This is printing from sneaker reducer")
             console.log(action.payload)
             state.sneakers = action.payload;
             state.loading = false;
