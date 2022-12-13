@@ -14,7 +14,6 @@ export const findSneakersLikedByUserThunk = createAsyncThunk(
     async(uid) => {
         const sneaks = await service.findLikes(uid)
         console.log("THESE ARE THE SNEAKERS OBJECTS THAT ARE LIKED")
-
         console.log(sneaks)
         return sneaks;
     }

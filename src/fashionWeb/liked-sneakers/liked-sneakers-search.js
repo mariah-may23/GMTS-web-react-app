@@ -10,6 +10,8 @@ const LikedSneakersSearch = () => {
 
     const {currentUser} = useSelector((state) => state.user)
     const {likes, loading} = useSelector((state) => state.likes)
+    console.log("LIKED SNEAKER SEARCH")
+    console.log(likes)
 
 
 
@@ -17,14 +19,17 @@ const LikedSneakersSearch = () => {
 
     //call thunk with dispatch to find by term
     const dispatch = useDispatch()
-    console.log("Printing likes in the liked sneakers search")
-    console.log(likes)
 
-    // THIS IS NOT PROPER USEEFFECT SO DISREGARD OR UPDATE LATER
+
+    // THIS IS NOT PROPER USE EFFECT SO DISREGARD OR UPDATE LATER
+
     useEffect(() => {
             dispatch(findSneakersLikedByUserThunk(currentUser.uid))
 
     }, [])
+
+    console.log("LIKED SNEAKERS FOUND FOR USER ARRAY")
+    console.log(likes)
 
 
 

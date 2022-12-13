@@ -21,6 +21,7 @@ const LikeButton = ({details= {}}) => {
 
 
 
+
     const likeHandler = () => {
             if( currentUser === null){
                 alert(`Please login to like the product!`)
@@ -45,8 +46,8 @@ const LikeButton = ({details= {}}) => {
                 setLiked(!liked);
                 setClicked(true);
 
-
         }
+
         }
 
 
