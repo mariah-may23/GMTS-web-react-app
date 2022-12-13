@@ -189,7 +189,7 @@ const ProfileComponent = () =>{
                  </label>
                  <PurchasedList/>
                  <div className="col-5 mb-2 ms-2" style={{fontSize:"13px"}}>
-                     List of purchased product
+
                  </div>
              </div>
 

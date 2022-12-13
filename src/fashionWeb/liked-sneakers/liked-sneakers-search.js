@@ -14,9 +14,6 @@ const LikedSneakersSearch = () => {
     console.log(likes)
 
 
-
-
-
     //call thunk with dispatch to find by term
     const dispatch = useDispatch()
 
