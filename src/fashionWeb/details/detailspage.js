@@ -7,14 +7,18 @@ import LikedSneakerItemDetails from "../liked-sneakers/liked-detail-summary-item
 const DetailsList = () => {
     const detailsArray = useSelector(state => state.details)
     const {likes} = useSelector(state => state.likes)
+    const {currentUser} = useSelector(state => state.user)
+    const {sneakers} = useSelector(state => state.sneakers)
+
+
 
     return(
         <>
             <ul className="list-group">
-                {!likes &&
+                {!currentUser || (currentUser && sneakers ) &&
                 <DetailsItem/>}
                 <div className="mb-4"/>
-                {likes &&
+                {likes && currentUser &&
                  <LikedSneakerItemDetails/>
                 }
 

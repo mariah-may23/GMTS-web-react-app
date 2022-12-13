@@ -14,11 +14,17 @@ const Comments = () => {
         }, [])
 
     const ClickHandler = () => {
-        const newComment = {
-            comment: commentContents,
-            uid: currentUser.uid
+        if( currentUser === null){
+            alert(`Please login to comment on the product!`)
+            setTimeout(window.location="/login")
+        } else{
+            const newComment = {
+                comment: commentContents,
+                uid: currentUser.uid
+            }
+            dispatch(createCommentThunk(newComment));
         }
-        dispatch(createCommentThunk(newComment));
+
     }
 
     return (
