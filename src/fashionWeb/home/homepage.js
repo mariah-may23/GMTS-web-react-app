@@ -14,12 +14,10 @@ const HomePage = () => {
     console.log(currentUser)
 
     return (
-        <div >
+        <div>
             <div className="row bg-black mb-0">
-                <div className="col-3 mt-2">
+                <div className="col-4 mt-3">
                     <form className="d-flex">
-                        <input className="form-control me-sm-2" type="text"
-                               placeholder="Search"/>
                         <Link to="/search"> <button className="btn btn-dark my-2 my-sm-0"
                                 type="submit">
 
@@ -31,7 +29,7 @@ const HomePage = () => {
                 </div>
 
                 
-                <div className="col-5 wd-title">
+                <div className="col-4 wd-title">
 
                     GIVE ME THAT STYLE
 
@@ -39,27 +37,27 @@ const HomePage = () => {
 
                 {
                     currentUser &&
-                    <div className="col-4 mt-2  wd-profile-title">
+                    <div className="col-4 mt-3">
                         <form action="/profile">
-                            <button className="btn btn-dark move-right"
+                            <button className="btn btn-dark float-end me-3"
                                     type="submit">Profile
                             </button>
                         </form>
-                    <h2>WELCOME {currentUser.userName}</h2>
+                        <h1 className="wd-profile-title d-none d-xxl-block">WELCOME {currentUser.userName}</h1>
 
                     </div>
                 }
 
                 { !currentUser
                   &&
-                    <div className="col-4 mt-2 move-right ">
+                    <div className="col-4 mt-3 float-end">
                         <form action="/login">
-                            <button className="btn btn-dark move-right"
+                            <button className="btn btn-dark float-end ms-3 me-3"
                                     type="submit">Login
                             </button>
                         </form>
                       <form action="/register">
-                        <button className="btn btn-dark move-right"
+                        <button className="btn btn-dark float-end"
                                 type="submit">Sign Up
                         </button>
                       </form>
