@@ -4,6 +4,7 @@ import React, {useState, useEffect} from "react";
 import SneakerItem from "./sneaker-item";
 //import "./sneakers.css";
 import {Link} from "react-router-dom";
+import "../home/index.css"
 
 
 const SneakersSearch = () => {
@@ -30,20 +31,25 @@ const SneakersSearch = () => {
             <div className="bg-black">
                 <div className="container bg-black">
                     <div className="row">
-                        <Link to="/" className="fw-bolder text-decoration-none text-white" style={{fontSize:"20px"}} >
-                            GMTS
+                        <Link to="/" className="wd-title flex-wrap text-decoration-none d-none d-md-block text-white" >
+                            GIVE ME THAT STYLE
                         </Link>
+
+                        <Link to="/" className="wd-title-smaller flex-wrap text-decoration-none d-block d-md-none text-white" >
+                            GIVE ME THAT STYLE
+                        </Link>
+
 
                         <div className="row pb-3 pt-4 ">
                             <span className="col-1">
                             <Link to="/">
-                                <button className="bi bi-arrow-left text-white btn btn-dark"> </button>
+                                <button className="bi bi-arrow-left text-white btn btn-dark float-end"> </button>
                             </Link>
                                 {/*<span className="text-white ps-2 fs-3">Search</span>*/}
                             </span>
                             {/*NEW SEARCH, NOT WORKING, FIX LATER*/}
 
-                            <div className="position-relative col-10">
+                            <div className="position-relative col-11">
                             <span className="d-flex">
                                 <input placeholder="Search Sneakers"
                                        className="form-control me-sm-2"
@@ -52,7 +58,7 @@ const SneakersSearch = () => {
                                        }}
                                        value={searchTerm}
                                 />
-                                <button className="btn btn-dark my-2 my-sm-0"
+                                <button className="btn btn-dark"
                                         onClick={() => {
                                             dispatch(findSneakerBySearchTermThunk(searchTerm))
                                         }}>

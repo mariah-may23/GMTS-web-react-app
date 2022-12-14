@@ -38,40 +38,58 @@ const EditProfileComponent = () =>{
 
 
     return(
-        <div>
+        <div className="bg-black">
+        <div className="container bg-white rounded">
         {userProfile &&
-        <div className="row mb-2">
+        <div className="row m-2">
             <div className="row m-2">
                 <Link to="/profile" className="col-1">
-                    <i className="bi bi-x-lg"></i>
+                    <i className="bi bi-arrow-left text-white btn btn-dark"></i>
                 </Link>
-                <div className="col-7 float-start">
-                     <label className="fw-bold float-start" style={{fontSize:"20px"}}>
+                <span className="col-8">
+                     <h5 className="fw-bold mt-2 ms-5" style={{fontSize:"20px"}}>
                         Edit profile
-                    </label>
-                </div>
-                <div className="col-3">
-                    <Link to="/profile" className="col-2">
+                    </h5>
+                </span>
+                <span className="col-3 ">
+                    <Link to="/profile">
                         <button onClick={SaveProfile}
-                         className="btn btn-dark rounded-pill float-end">
+                         className="btn btn-dark float-end ms-3">
                             <b>Save</b>
                         </button>
                     </Link>
-                </div>
+                </span>
             </div>
 
             <div className="ms-3">
                  <form>
-                    <h3> Account Profile </h3>
-                    <div className="row mb-2">
-                        <div className="border border-muted rounded ps-2 pe-2 mb-2 col-4 me-3">
+                    <h5 className="ms-2 mt-4 mb-4"> Account Profile </h5>
+                    <div className=" mb-2">
+                        <div className="border border-muted rounded ps-2 pe-2 mb-2 col-4 me-3 col-5">
                             <span className="mt-1 mb-1 text-muted">First Name</span>
                             <br/>
                             <textarea className="mt-1 gmts-textbox-edit-profile"
                              onChange={(e) => setNewFirstName(e.target.value)}
                              rows="1" value={firstName}/>
                         </div>
-                        <div className="border border-muted rounded ps-2 pe-2 mb-2 col-4">
+
+                        <div className="border border-muted rounded ps-2 pe-2 mb-3 col-5">
+                            <span className="mt-1 mb-1 text-muted">Username</span>
+                            <br/>
+                            <textarea className="mt-1 gmts-textbox-edit-profile"
+                                      onChange={(e) => setNewUsername(e.target.value)}
+                                      rows="1" value={userName}/>
+                        </div>
+
+                        <div className="border border-muted rounded ps-2 pe-2 mb-2 col-5">
+                            <span className="mt-1 mb-1 text-muted">Email</span>
+                            <br/>
+                            <textarea className="mt-1 gmts-textbox-edit-profile"
+                                      onChange={(e) => setNewEmail(e.target.value)}
+                                      rows="1" value={email}/>
+                        </div>
+
+                        <div className="border border-muted rounded ps-2 pe-2 mb-2 col-5">
                             <span className="mt-1 mb-1 text-muted">Last Name</span>
                             <br/>
                             <textarea className="mt-1 gmts-textbox-edit-profile"
@@ -80,25 +98,9 @@ const EditProfileComponent = () =>{
                         </div>
                     </div>
 
-                    <div className="border border-muted rounded ps-2 pe-2 mb-3 ms-3 col-5">
-                        <span className="mt-1 mb-1 text-muted">Username</span>
-                        <br/>
-                        <textarea className="mt-1 gmts-textbox-edit-profile"
-                         onChange={(e) => setNewUsername(e.target.value)}
-                         rows="1" value={userName}/>
-                    </div>
-
-                    <div className="border border-muted rounded ps-2 pe-2 mb-2 ms-3 col-5">
-                        <span className="mt-1 mb-1 text-muted">Username</span>
-                        <br/>
-                        <textarea className="mt-1 gmts-textbox-edit-profile"
-                         onChange={(e) => setNewEmail(e.target.value)}
-                         rows="1" value={email}/>
-                    </div>
-
-                    <h3> Shipping Address </h3>
-                    <div className="row mb-2">
-                    <div className="border border-muted rounded ps-2 pe-2 mb-2 col-4">
+                    <h5 className="mt-5 ms-2"> Shipping Address </h5>
+                    <div className="mb-2 mt-4">
+                    <div className="border border-muted rounded ps-2 pe-2 mb-2 col-5">
                         <span className="mt-1 mb-1 text-muted">Address1</span>
                         <br/>
                         <textarea className="mt-1 gmts-textbox-edit-profile"
@@ -106,7 +108,7 @@ const EditProfileComponent = () =>{
                          rows="1" value={address1}/>
                     </div>
 
-                    <div className="border border-muted rounded ps-2 pe-2 mb-2 ms-3 col-4">
+                    <div className="border border-muted rounded ps-2 pe-2 mb-2 col-5">
                         <span className="mt-1 mb-1 text-muted">(Optional) Address2 (Apt, Unit #)</span>
                         <br/>
                         <textarea className="mt-1 gmts-textbox-edit-profile"
@@ -115,21 +117,21 @@ const EditProfileComponent = () =>{
                     </div>
                     </div>
 
-                    <div className="border border-muted rounded ps-2 pe-2 mb-2 ms-3 col-5">
+                    <div className="border border-muted rounded ps-2 pe-2 mb-2 col-5">
                         <span className="mt-1 mb-1 text-muted">City</span>
                         <br/>
                         <textarea className="mt-1 gmts-textbox-edit-profile"
                          onChange={(e) => setNewCity(e.target.value)}
                          rows="1" value={city}/>
                     </div>
-                    <div className="border border-muted rounded ps-2 pe-2 mb-2 ms-3 col-5">
+                    <div className="border border-muted rounded ps-2 pe-2 mb-2 col-5">
                         <span className="mt-1 mb-1 text-muted">State</span>
                         <br/>
                         <textarea className="mt-1 gmts-textbox-edit-profile"
                          onChange={(e) => setNewsState(e.target.value)}
                          rows="1" value={state}/>
                     </div>
-                    <div className="border border-muted rounded ps-2 pe-2 mb-2 ms-3 col-5">
+                    <div className="border border-muted rounded ps-2 pe-2 mb-2 col-5">
                         <span className="mt-1 mb-1 text-muted">Zipcode</span>
                         <br/>
                         <textarea className="mt-1 gmts-textbox-edit-profile"
@@ -137,16 +139,15 @@ const EditProfileComponent = () =>{
                          rows="1" value={zipcode}/>
                     </div>
 
-                    <h3> Payment Method </h3>
-                    <div className="row mb-2">
+                    <h5 className="mt-5 mb-4 ms-2"> Payment Method </h5>
                         <div className="border border-muted rounded ps-2 pe-2 mb-2 col-5">
                             <span className="mt-1 mb-1 text-muted">Card Number</span>
                             <br/>
                             <textarea className="mt-1 gmts-textbox-edit-profile"
                              onChange={(e) => setNewZipcode(e.target.value)}
                              rows="1" value={zipcode}/>
-                        </div>
                     </div>
+                     <div className= "mt-5"></div>
 
                  </form>
              </div>
@@ -154,6 +155,7 @@ const EditProfileComponent = () =>{
          </div>
          }
          </div>
+        </div>
 
     );
 }

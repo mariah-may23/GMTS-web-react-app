@@ -32,26 +32,26 @@ const LikedSneakersSearch = () => {
 
     return(
         <>
-            <div className="bg-black">
-                <h2 className="wd-title float-start">
-                    Recently liked
-                </h2>
-                <div className="row container-fluid bg-black">
+            <div className="bg-black ">
+                <div className="container">
+                    <h2 className="wd-title float-start ps-4">
+                        Recently liked:
+                    </h2>
+                    <div className="row container-fluid bg-black">
 
-                    <div className="container-fluid bg-black">
 
-                        <div className="row">
-                            {!loading && likes &&
-                                likes.map((like) =>
-                                    <div className="col-12 col-sm-6 col-lg-4 col-xxl-3 mt-3 d-flex align-items-stretch bg-black">
-                                        <LikedSneakerItem
-                                            key={like._id}
-                                            search={like}
+                            <div className="row">
+                                {!loading && likes &&
+                                    likes.map((like) =>
+                                        <div className="col-12 col-sm-6 col-lg-4 col-xxl-3 mt-3 d-flex align-items-stretch bg-black">
+                                            <LikedSneakerItem
+                                                key={like._id}
+                                                search={like}
                                             />
-                                    </div>
-                                )
-                            }
-                        </div>
+                                        </div>
+                                    )
+                                }
+                            </div>
 
                     </div>
                 </div>

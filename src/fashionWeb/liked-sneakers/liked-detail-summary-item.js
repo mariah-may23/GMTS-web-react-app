@@ -23,7 +23,7 @@ const LikedDetailsItem = () => {
 
 
     return(
-        <li className="list-group-item">
+        <li className="list-group-item rounded">
         {allSneakers &&
         <>
             <div className="row">
@@ -52,10 +52,10 @@ const LikedDetailsItem = () => {
 
                     <div>
                         <span className=" fw-normal ">
-                            Available in :
+                            Available in:
                         </span>
                         <span className=" fw-light ">
-                            {details.colorway}
+                            {" " + details.colorway}
                         </span>
                     </div>
 
@@ -72,10 +72,10 @@ const LikedDetailsItem = () => {
 
                     <div>
                         <span className="fw-normal">
-                            Release Date :
+                            Release Date:
                         </span>
                         <span className="fw-light">
-                            {details.releaseDate}
+                            {" " + details.releaseDate}
                         </span>
                     </div>
 

@@ -16,8 +16,12 @@ const DetailsList = () => {
     return(
         <>
             <ul className="list-group">
-                <Link to="/" className="fw-bolder text-decoration-none text-white" style={{fontSize:"20px"}} >
-                    GMTS
+                <Link to="/" className="wd-title flex-wrap text-decoration-none d-none d-md-block text-white" >
+                    GIVE ME THAT STYLE
+                </Link>
+
+                <Link to="/" className="wd-title-smaller flex-wrap text-decoration-none d-block d-md-none text-white" >
+                    GIVE ME THAT STYLE
                 </Link>
                 {!currentUser &&
                 <DetailsItem/>
