@@ -15,7 +15,7 @@ const HomePage = () => {
     return (
         <div >
             <div className="row bg-black mb-0">
-                <div className="col-3 mt-2">
+                <div className="col-4 col-lg-3 mt-2 mb-2">
                     <form className="d-flex">
 
                         <Link to="/search"> <button className="btn btn-dark my-2 my-sm-0"
@@ -28,8 +28,21 @@ const HomePage = () => {
 
                 </div>
 
-                
-                <div className="col-5 wd-title">
+
+
+                <div className="col-6 col-xxl-6 wd-title flex-wrap d-none d-xl-block">
+
+                    GIVE ME THAT STYLE
+
+                </div>
+
+                <div className="col-6 col-xl-6 wd-title-smaller flex-wrap d-none d-lg-block d-xl-none">
+
+                    GIVE ME THAT STYLE
+
+                </div>
+
+                <div className="col-4 col-lg-6 wd-title-smallest flex-wrap d-block d-lg-none">
 
                     GIVE ME THAT STYLE
 
@@ -37,27 +50,27 @@ const HomePage = () => {
 
                 {
                     currentUser &&
-                    <div className="col-4 mt-2  wd-profile-title">
+                    <div className="col-4 col-lg-3 mt-2 mb-2">
                         <form action="/profile">
-                            <button className="btn btn-dark move-right"
+                            <button className="btn btn-dark float-end me-3"
                                     type="submit">Profile
                             </button>
                         </form>
-                    <h2>WELCOME {currentUser.userName}</h2>
+                    <h1 className="wd-title-smaller d-none d-xxl-block">WELCOME {currentUser.userName}</h1>
 
                     </div>
                 }
 
                 { !currentUser
                   &&
-                    <div className="col-4 mt-2 move-right ">
+                    <div className="col-4 col-lg-3 mt-2 mb-2 float-end">
                         <form action="/login">
-                            <button className="btn btn-dark move-right"
+                            <button className="btn btn-dark float-end ms-3 me-3"
                                     type="submit">Login
                             </button>
                         </form>
                       <form action="/register">
-                        <button className="btn btn-dark move-right"
+                        <button className="btn btn-dark float-end"
                                 type="submit">Sign Up
                         </button>
                       </form>

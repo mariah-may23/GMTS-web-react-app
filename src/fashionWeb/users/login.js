@@ -32,14 +32,17 @@ const Login = () => {
                         </div>
                     }
 
+                    <h4 className="text-white float-start">Username:</h4>
                     <input
                         className="form-control mb-2"
                         value={userName}
                         onChange={(e)=> setUsername(e.target.value)}/>
+                    <br/>
+                    <h4 className="text-white float-start">Password:</h4>
                     <input  className="form-control mb-2"
                         value={password}
                         onChange={(e)=> setPassword(e.target.value)}/>
-
+                    <br/>
                     <button onClick={handleLoginButton} className="btn btn-primary w-100">
                         Login
                     </button>

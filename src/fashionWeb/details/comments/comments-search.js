@@ -30,16 +30,16 @@ const UserComments = () => {
         <div className="row">
 
             <div className="col-12"><hr/>
-                <h2>Recent Comments</h2>
+                <h3>Recent Comments:</h3>
 
-            {
+                {
 
-                comments.map(post =>
-                    <CommentItem key={post._id} post={post}/>
-                )
+                    comments.map(post =>
+                        <CommentItem key={post._id} post={post}/>
+                    )
 
-            }
-        </div>
+                }
+            </div>
         </div>
     );
 }

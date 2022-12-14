@@ -43,11 +43,11 @@ const CommentItem = ({post}) => {
                     <br>
                     </br>
 
-                    <Link to={`/profile/${commentedUser.uid}`}>
-                        {commentedUser.userName}
+                    <div className="fw-bolder">
+                        <Link to={`/profile/${commentedUser.uid}`}>
+                        {commentedUser.userName + ": "}
                     </Link>
-
-                    <br></br>
+                    </div>
                     {post.comment}
                 </p>
             </span>

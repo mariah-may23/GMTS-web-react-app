@@ -24,7 +24,7 @@ const DetailsItem = () => {
 
     return (
 
-        <li className="list-group-item">
+        <li className="list-group-item rounded">
 
             <div className="row">
                 <div className="col-12 p-2">
@@ -52,16 +52,16 @@ const DetailsItem = () => {
 
                     <div>
                         <span className=" fw-normal ">
-                            Available in :
+                            Available in:
                         </span>
                         <span className=" fw-light ">
-                            {details.colorway}
+                            {" " + details.colorway}
                         </span>
                     </div>
 
                     <div>
                         <span className="fw-normal">
-                            Retail Price : $
+                            Retail Price: $
                         </span>
                         <span className="fw-light">
                             {details.retailPrice}
@@ -72,10 +72,10 @@ const DetailsItem = () => {
 
                     <div>
                         <span className="fw-normal">
-                            Release Date :
+                            Release Date:
                         </span>
                         <span className="fw-light">
-                            {details.releaseDate}
+                            {" " +details.releaseDate}
                         </span>
                     </div>
 
@@ -91,7 +91,7 @@ const DetailsItem = () => {
 
             <div className="p-4">
 
-                THE DETAILS
+                DETAILS
                 <hr></hr>
             </div>
 

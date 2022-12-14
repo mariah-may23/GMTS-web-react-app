@@ -1,6 +1,6 @@
 import {useParams, Link} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {findAllUsersThunk} from "../users/users-thunk";
 import {findCommentsThunk} from "../details/comments/comments-thunks";
 import UserComments from "../details/comments/comments-search";
@@ -26,51 +26,57 @@ const ProfileDetails = () => {
 
 
     return(
-        <div>
-            {publicUser &&
-             <div className="row m-2">
-                 <Link to="/" className="fw-bolder text-decoration-none text-black" style={{fontSize:"20px"}} >
-                     GMTS
-                 </Link>
-                 <div className="row mb-3">
-                     <div className="col-9 mb-3">
-                         <label className="fw-bolder">
-                             {publicUser.userName}'s Account
-                         </label>
-                     </div>
-                 </div>
+        <div className="bg-black">
+            <Link to="/" className="wd-title flex-wrap text-decoration-none d-none d-md-block text-white" >
+                GIVE ME THAT STYLE
+            </Link>
 
-                 <div className="row mb-3">
-                     <div className="col-5 mb-2 ms-2" style={{fontSize:"15px"}}>
-                         <label className="mb-0 fw-bolder">
-                             Name
-                         </label>
-                         <br></br>
-                         <label className="col-6">
-                             {publicUser.firstName} {publicUser.lastName}
-                         </label>
-                         <br></br>
-                     </div>
-                 </div>
+            <Link to="/" className="wd-title-smaller flex-wrap text-decoration-none d-block d-md-none text-white" >
+                GIVE ME THAT STYLE
+            </Link>
+            <div className="container bg-white rounded">
+                {publicUser &&
+                    <div className="row m-2">
+                        <div className="row mb-3">
+                            <div className="col-9 mb-3 mt-3">
+                                <h3 className="">
+                                    {publicUser.userName}'s Account
+                                </h3>
+                            </div>
+                        </div>
 
-                 <div className="row mb-3">
-                     <div className="col-5 mb-2 ms-2" style={{fontSize:"15px"}}>
-                         <label className="mb-0 fw-bolder">
-                             Role
-                         </label>
-                         <br></br>
-                         <label className="col-6">
-                             {publicUser.type}
-                         </label>
-                         <br></br>
-                     </div>
-                 </div>
+                        <div className="row mb-3">
+                            <div className="col-5 mb-2 ms-2" style={{fontSize:"15px"}}>
+                                <label className="mb-0 fw-bolder">
+                                    Name
+                                </label>
+                                <br></br>
+                                <label className="col-6">
+                                    {publicUser.firstName} {publicUser.lastName}
+                                </label>
+                                <br></br>
+                            </div>
+                        </div>
 
-                 <UserComments/>
+                        <div className="row mb-3">
+                            <div className="col-5 mb-2 ms-2" style={{fontSize:"15px"}}>
+                                <label className="mb-0 fw-bolder">
+                                    Role
+                                </label>
+                                <br></br>
+                                <label className="col-6">
+                                    {publicUser.type}
+                                </label>
+                                <br></br>
+                            </div>
+                        </div>
+
+                        <UserComments/>
 
 
-             </div>
-            }
+                    </div>
+                }
+            </div>
         </div>
     );
 

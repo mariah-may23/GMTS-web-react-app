@@ -23,7 +23,7 @@ const PurchasedItem = (
 
                     </ul>
                 </p>
-                <Link to={`/details/${search._id}`} className="btn btn-primary">Details</Link>
+                <Link to={`/details/${search._id}`} className="btn btn-dark">Details</Link>
                 <h4 className="float-end fw-bolder"> ${search.retailPrice}</h4>
             </div>
         </div>

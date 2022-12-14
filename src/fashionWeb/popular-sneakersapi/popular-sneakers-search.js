@@ -25,28 +25,24 @@ const PopularSneakersSearch = () => {
         <>
 
             <div className="bg-black">
-                <h2 className="wd-title float-start">
-                    Trending
-                </h2>
+                <div className="container">
+                    <h2 className="wd-title float-start ps-4 pt-4">
+                        Trending:
+                    </h2>
 
-                <div className="row container-fluid bg-black">
-
-                    <div className="container-fluid bg-black">
-
-                        <div className="row">
-                            {!loading && sneakers &&
-                                sneakers.map((item) =>
-                                    <div className="col-12 col-sm-6 col-lg-4 col-xxl-3 mt-3 d-flex align-items-stretch bg-black">
-                                        <PopularSneakerItem
-                                            key={item._id}
-                                            search={item}
+                    <div className="row container-fluid bg-black">
+                            <div className="row">
+                                {!loading && sneakers &&
+                                    sneakers.map((item) =>
+                                        <div className="col-12 col-sm-6 col-lg-4 col-xxl-3 mt-3 d-flex align-items-stretch bg-black">
+                                            <PopularSneakerItem
+                                                key={item._id}
+                                                search={item}
                                             />
-                                    </div>
-                                )
-                            }
-                        </div>
-
-
+                                        </div>
+                                    )
+                                }
+                            </div>
                     </div>
                 </div>
             </div>
