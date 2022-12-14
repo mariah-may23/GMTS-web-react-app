@@ -31,11 +31,11 @@ const LikedSneakersSearch = () => {
 
 
     return(
-
         <>
-
-
             <div className="bg-black">
+                <h2 className="wd-title float-start">
+                    Recently liked
+                </h2>
                 <div className="row container-fluid bg-black">
 
                     <div className="container-fluid bg-black">
@@ -53,12 +53,9 @@ const LikedSneakersSearch = () => {
                             }
                         </div>
 
-
                     </div>
                 </div>
             </div>
-
-
 
         </>
     )

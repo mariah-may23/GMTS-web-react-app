@@ -17,6 +17,8 @@ const HomeComponent = () => {
             <Homepage/>
             <Slides/>
             {!currentUser &&
+
+
              <PopularSneakersSearch/>
             }
             {currentUser &&

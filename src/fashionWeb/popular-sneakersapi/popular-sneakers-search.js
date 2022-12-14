@@ -2,6 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {findSneakersPopularThunk} from "./popular-sneakers-thunks";
 import React, {useState, useEffect} from "react";
 import PopularSneakerItem from "./popular-sneaker-item";
+import "../home/index.css";
 
 
 const PopularSneakersSearch = () => {
@@ -19,13 +20,15 @@ const PopularSneakersSearch = () => {
     }, [])
 
 
-
     return(
 
         <>
 
-
             <div className="bg-black">
+                <h2 className="wd-title float-start">
+                    Trending
+                </h2>
+
                 <div className="row container-fluid bg-black">
 
                     <div className="container-fluid bg-black">

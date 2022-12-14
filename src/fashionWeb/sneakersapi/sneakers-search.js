@@ -30,6 +30,9 @@ const SneakersSearch = () => {
             <div className="bg-black">
                 <div className="container bg-black">
                     <div className="row">
+                        <Link to="/" className="fw-bolder text-decoration-none text-white" style={{fontSize:"20px"}} >
+                            GMTS
+                        </Link>
 
                         <div className="row pb-3 pt-4 ">
                             <span className="col-1">

@@ -4,9 +4,12 @@ import React, {useEffect, useState} from "react";
 import userInfo from "./profileInfo";
 import PurchasedList from "./purchased-list";
 import {logoutThunk, profileThunk} from "../users/users-thunk";
+import {useParams} from "react-router";
 
 
 const ProfileComponent = () =>{
+    const {uid} = useParams()
+
     const {currentUser} = useSelector((state) => state.user);
     const loggedIn = true;
     const dispatch = useDispatch()

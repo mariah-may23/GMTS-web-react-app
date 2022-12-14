@@ -23,7 +23,9 @@ const DetailsItem = () => {
 
 
     return (
+
         <li className="list-group-item">
+
             <div className="row">
                 <div className="col-12 p-2">
                     <div>

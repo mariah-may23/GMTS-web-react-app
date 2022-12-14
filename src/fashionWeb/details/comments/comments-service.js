@@ -17,3 +17,8 @@ export const deleteComment = async (cid) => {
     const response = await axios.delete(`${BASE_URL}/${cid}`)
     return response.data
 }
+export const findCommentsByUser = async (uid) => {
+    const response = await axios.get(`${BASE_URL}/${uid}`)
+    return response.data
+}
+

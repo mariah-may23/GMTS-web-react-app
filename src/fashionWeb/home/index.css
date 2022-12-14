@@ -1,7 +1,7 @@
 
 .wd-title {
     text-align: center;
-
+    background-color: black;
     font-family: Copperplate, serif;
     color: white;
     font-size: xxx-large;
@@ -9,7 +9,7 @@
 }
 .wd-profile-title {
     text-align: center;
-
+    background-color: black;
     font-family: Copperplate, serif;
     color: white;
     font-size: large;

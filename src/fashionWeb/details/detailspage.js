@@ -2,6 +2,7 @@ import React from "react";
 import DetailsItem from "./detail-summary-item" ;
 import {useSelector} from "react-redux";
 import LikedSneakerItemDetails from "../liked-sneakers/liked-detail-summary-item";
+import {Link} from "react-router-dom";
 
 
 const DetailsList = () => {
@@ -15,6 +16,9 @@ const DetailsList = () => {
     return(
         <>
             <ul className="list-group">
+                <Link to="/" className="fw-bolder text-decoration-none text-white" style={{fontSize:"20px"}} >
+                    GMTS
+                </Link>
                 {!currentUser &&
                 <DetailsItem/>
                 }
