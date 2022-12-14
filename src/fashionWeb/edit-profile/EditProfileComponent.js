@@ -1,26 +1,28 @@
 import {useSelector, useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
 import React, {useState, useEffect} from "react";
-import {editProfile} from "../profile/profile-reducer"
 import {updateUserThunk} from "../users/users-thunk";
+import {useNavigate} from "react-router";
 
-const EditProfileComponent = () =>{
-    const userProfile = useSelector((state) => state.user.currentUser);
+const EditProfile = () =>{
+    const currentUser = useSelector((state) => state.user.users);
 //    console.log(userProfile)
-    const [profile, setProfile] = useState(userProfile);
-    const [fullName, setNewFullName] = useState(userProfile.fullName);
-    const [firstName, setNewFirstName] = useState(userProfile.firstName);
-    const [lastName, setNewLastName] = useState(userProfile.lastName);
-    const [userName, setNewUsername] = useState(userProfile.userName);
-    const [address1, setNewAddress1] = useState(userProfile.address1);
-    const [address2, setNewAddress2] = useState(userProfile.address2);
-    const [city, setNewCity] = useState(userProfile.city);
-    const [state, setNewsState] = useState(userProfile.state);
-    const [zipcode, setNewZipcode] = useState(userProfile.zipcode);
-    const [email, setNewEmail] = useState(userProfile.email);
-    const dispatch = useDispatch();
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    // const [profile, setProfile] = useState(currentUser);
+    const [fullName, setNewFullName] = useState(currentUser.fullName);
+    const [firstName, setNewFirstName] = useState(currentUser.firstName);
+    const [lastName, setNewLastName] = useState(currentUser.lastName);
+    const [userName, setNewUsername] = useState(currentUser.userName);
+    const [address1, setNewAddress1] = useState(currentUser.address1);
+    const [address2, setNewAddress2] = useState(currentUser.address2);
+    const [city, setNewCity] = useState(currentUser.city);
+    const [state, setNewsState] = useState(currentUser.state);
+    const [zipcode, setNewZipcode] = useState(currentUser.zipcode);
+    const [email, setNewEmail] = useState(currentUser.email);
 
     const SaveProfile = () => {
+
         console.log("Save button initiation");
 
         const updateName = firstName + " " + lastName;
@@ -28,18 +30,18 @@ const EditProfileComponent = () =>{
         {setNewFullName(updateName)};
 //        const temp = {...userProfile, fullName, firstName, lastName, userName, address1, address2, city, state, zipcode, email}
 //        dispatch(editProfile({...userProfile, fullName, firstName, lastName, userName, address1, address2, city, state, zipcode, email}));
-        dispatch(updateUserThunk({
-            ...userProfile,fullName, firstName, lastName, userName, address1, address2, city, state, zipcode, email
-        }))
+        const newUser = {
+            ...currentUser,fullName, firstName, lastName, userName, address1, address2, city, state, zipcode, email
+        }
+        dispatch(updateUserThunk(newUser))
+        navigate('/profile')
         console.log("done editing render changed value")
-        console.log(userProfile);
+        console.log(currentUser);
     }
-
-
 
     return(
         <div>
-        {userProfile &&
+        {currentUser &&
         <div className="row mb-2">
             <div className="row m-2">
                 <Link to="/profile" className="col-1">
@@ -51,12 +53,10 @@ const EditProfileComponent = () =>{
                     </label>
                 </div>
                 <div className="col-3">
-                    <Link to="/profile" className="col-2">
                         <button onClick={SaveProfile}
                          className="btn btn-dark rounded-pill float-end">
                             <b>Save</b>
                         </button>
-                    </Link>
                 </div>
             </div>
 
@@ -157,4 +157,4 @@ const EditProfileComponent = () =>{
 
     );
 }
-export default EditProfileComponent;
+export default EditProfile;

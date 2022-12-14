@@ -21,6 +21,7 @@ import detailsReducer from "./details/details-reducer";
 import ProfileDetails from "./public-profile/ProfileDetails";
 import commentsReducer from "./details/comments/comments-reducer";
 import likesReducer from "./details/likes/likes-reducer";
+import EditProfile from "./edit-profile/EditProfileComponent";
 
 const store = configureStore({
     reducer: {
@@ -41,7 +42,10 @@ function GMTSfashion() {
                 <Routes>
                     <Route path="" element={<HomePage/>}/>
                     <Route path="profile" element={<ProfilePage/>}/>
-                    <Route path="edit-profile" element={<EditProfilePage/>}/>
+                    <Route path={'edit-profile'}
+                           element={
+                                   <EditProfile/>
+                           }/>
 
                     <Route path="profile/:uid" element={<ProfileDetails/>}/>
 
