@@ -36,11 +36,12 @@ const LikedSneakersSearch = () => {
 
 
             <div className="bg-black">
-                <div className="row container-fluid bg-black">
+                {/*<div className="row container-fluid bg-black">*/}
 
-                    <div className="container-fluid bg-black">
+                    <div className="container bg-black">
 
                         <div className="row">
+                            <h1 className="fw-bolder text-white pt-4 ps-4">Your liked Sneakers:</h1>
                             {!loading && likes &&
                                 likes.map((like) =>
                                     <div className="col-12 col-sm-6 col-lg-4 col-xxl-3 mt-3 d-flex align-items-stretch bg-black">
@@ -55,7 +56,7 @@ const LikedSneakersSearch = () => {
 
 
                     </div>
-                </div>
+                {/*</div>*/}
             </div>
 
 

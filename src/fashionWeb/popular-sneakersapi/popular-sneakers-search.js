@@ -26,14 +26,15 @@ const PopularSneakersSearch = () => {
 
 
             <div className="bg-black">
-                <div className="row container-fluid bg-black">
+                {/*<div className="row container-fluid bg-black">*/}
 
-                    <div className="container-fluid bg-black">
+                    <div className="container bg-black">
 
                         <div className="row">
+                            <h1 className="fw-bolder text-white pt-4 ps-4">Suggestions for you:</h1>
                             {!loading && sneakers &&
                                 sneakers.map((item) =>
-                                    <div className="col-12 col-sm-6 col-lg-4 col-xxl-3 mt-3 d-flex align-items-stretch bg-black">
+                                    <div className="col-12 col-sm-6 col-lg-4 col-xxl-3 mt-3 d-flex align-items-stretch bg-black p-4">
                                         <PopularSneakerItem
                                             key={item._id}
                                             search={item}
@@ -45,7 +46,7 @@ const PopularSneakersSearch = () => {
 
 
                     </div>
-                </div>
+                {/*</div>*/}
             </div>
 
 

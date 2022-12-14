@@ -34,13 +34,13 @@ const SneakersSearch = () => {
                         <div className="row pb-3 pt-4 ">
                             <span className="col-1">
                             <Link to="/">
-                                <button className="bi bi-arrow-left text-white btn btn-dark"> </button>
+                                <button className="bi bi-arrow-left text-white btn btn-dark float-end"> </button>
                             </Link>
                                 {/*<span className="text-white ps-2 fs-3">Search</span>*/}
                             </span>
                             {/*NEW SEARCH, NOT WORKING, FIX LATER*/}
 
-                            <div className="position-relative col-10">
+                            <div className="position-relative col-11">
                             <span className="d-flex">
                                 <input placeholder="Search Sneakers"
                                        className="form-control me-sm-2"
@@ -49,7 +49,7 @@ const SneakersSearch = () => {
                                        }}
                                        value={searchTerm}
                                 />
-                                <button className="btn btn-dark my-2 my-sm-0"
+                                <button className="btn btn-dark"
                                         onClick={() => {
                                             dispatch(findSneakerBySearchTermThunk(searchTerm))
                                         }}>

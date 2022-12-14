@@ -5,14 +5,23 @@
     font-family: Copperplate, serif;
     color: white;
     font-size: xxx-large;
-
 }
+
+.wd-title-smaller {
+    text-align: center;
+
+    font-family: Copperplate, serif;
+    color: white;
+    font-size: xx-large;
+}
+
+
 .wd-profile-title {
     text-align: center;
 
     font-family: Copperplate, serif;
     color: white;
-    font-size: large;
+    font-size: x-large;
 
 }
 .wd-slider {
